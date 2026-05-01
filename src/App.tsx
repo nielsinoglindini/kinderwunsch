@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Heart, Activity, Leaf, Calendar, ArrowRight, Menu } from 'lucide-react';
 import { BookingModal } from './components/BookingModal';
 import './index.css';
