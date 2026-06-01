@@ -426,6 +426,12 @@ a {
   .services-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 48px auto 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -794,4 +800,209 @@ a {
   .booking-modal-body {
     padding: 24px;
   }
+}
+
+/* --- Pricing Section --- */
+.pricing-section {
+  padding: 96px 0;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 48px 32px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.pricing-card.featured {
+  border-color: var(--color-primary);
+  background-color: #FFFBF8; /* Subtle warmth */
+}
+
+.pricing-card-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-primary);
+  color: white;
+  padding: 6px 18px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
+}
+
+.pricing-card-header {
+  text-align: center;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--color-bg-secondary);
+  padding-bottom: 24px;
+}
+
+.pricing-card-header h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.pricing-card-header .duration {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.price-display {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.price-amount {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1;
+}
+
+.price-currency {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-left: 4px;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+.pricing-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.pricing-feature-item svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Service Selector inside Modal */
+.service-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.service-option-card {
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  width: 100%;
+}
+
+.service-option-card:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-secondary);
+}
+
+.service-option-card.selected {
+  border-color: var(--color-primary);
+  background-color: #FFFBF8;
+  box-shadow: var(--shadow-sm);
+}
+
+.service-option-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.service-option-card.selected .service-option-radio {
+  border-color: var(--color-primary);
+}
+
+.service-option-radio-inner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  display: none;
+}
+
+.service-option-card.selected .service-option-radio-inner {
+  display: block;
+}
+
+.service-option-info {
+  flex-grow: 1;
+}
+
+.service-option-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+  margin-bottom: 4px;
+}
+
+.service-option-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.service-option-price {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.service-option-price span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
 }

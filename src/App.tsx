@@ -1,10 +1,16 @@
 import { useEffect, useState } from 'react';
-import { Heart, Activity, Leaf, Calendar, ArrowRight, Menu } from 'lucide-react';
+import { Heart, Activity, Leaf, Calendar, ArrowRight, Menu, Check } from 'lucide-react';
 import { BookingModal } from './components/BookingModal';
 import './index.css';
 
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState<'initial' | 'followup' | 'package' | undefined>(undefined);
+
+  const handleOpenBooking = (service?: 'initial' | 'followup' | 'package') => {
+    setSelectedService(service);
+    setIsBookingOpen(true);
+  };
 
   // Simple intersection observer setup for fade-in animations
   useEffect(() => {
@@ -38,8 +44,9 @@ function App() {
           <div className="nav-links">
             <a href="#about" className="nav-link">Über mich</a>
             <a href="#services" className="nav-link">Leistungen</a>
+            <a href="#pricing" className="nav-link">Preise</a>
             <a href="#blog" className="nav-link">Ratgeber</a>
-            <button onClick={() => setIsBookingOpen(true)} className="btn btn-outline" style={{ padding: '8px 20px', cursor: 'pointer' }}>Termin buchen</button>
+            <button onClick={() => handleOpenBooking()} className="btn btn-outline" style={{ padding: '8px 20px', cursor: 'pointer' }}>Termin buchen</button>
           </div>
           <div className="mobile-menu" style={{ display: 'none' /* Handled by media queries normally */ }}>
             <Menu className="text-gray-600" />
@@ -56,8 +63,8 @@ function App() {
               Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer biete ich Ihnen einen sicheren Raum. Mit Empathie, Erfahrung und Herz bin ich an Ihrer Seite.
             </p>
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <button onClick={() => setIsBookingOpen(true)} className="btn btn-primary" style={{ cursor: 'pointer' }}>
-                Kostenfreies Erstgespräch
+              <button onClick={() => handleOpenBooking('initial')} className="btn btn-primary" style={{ cursor: 'pointer' }}>
+                Erstgespräch buchen
               </button>
               <a href="#services" className="btn btn-outline">
                 Mehr erfahren
@@ -173,6 +180,137 @@ function App() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing" className="section section-light">
+        <div className="container">
+          <div className="text-center animate-on-scroll">
+            <h2 className="section-title">Preise & Angebote</h2>
+            <p className="section-subtitle">
+              Transparente Preisgestaltung für eine verlässliche und liebevolle Unterstützung auf Ihrem individuellen Weg.
+            </p>
+          </div>
+
+          <div className="pricing-grid">
+            {/* Card 1: Erstgespräch */}
+            <div className="pricing-card animate-on-scroll">
+              <div className="pricing-card-header">
+                <h3>Erstgespräch</h3>
+                <span className="duration">Dauer: 60 Minuten</span>
+                <div className="price-display">
+                  <span className="price-amount">110</span>
+                  <span className="price-currency">€</span>
+                </div>
+              </div>
+              <ul className="pricing-features">
+                <li className="pricing-feature-item">
+                  <Check size={18} color="var(--color-primary)" />
+                  <span>Ausführliche Anamnese und Kennenlernen</span>
+                </li>
+                <li className="pricing-feature-item">
+                  <Check size={18} color="var(--color-primary)" />
+                  <span>Klärung Ihrer dringlichsten Fragen</span>
+                </li>
+                <li className="pricing-feature-item">
+                  <Check size={18} color="var(--color-primary)" />
+                  <span>Erste Orientierung und nächste Schritte</span>
+                </li>
+                <li className="pricing-feature-item">
+                  <Check size={18} color="var(--color-primary)" />
+                  <span>Persönlich, per Telefon oder Zoom-Meeting</span>
+                </li>
+              </ul>
+              <button 
+                onClick={() => handleOpenBooking('initial')} 
+                className="btn btn-outline" 
+                style={{ width: '100%', marginTop: 'auto' }}
+              >
+                Erstgespräch buchen
+              </button>
+            </div>
+
+            {/* Card 2: Folgesitzung */}
+            <div className="pricing-card animate-on-scroll" style={{ transitionDelay: '0.1s' }}>
+              <div className="pricing-card-header">
+                <h3>Folgesitzung</h3>
+                <span className="duration">Dauer: 60 Minuten</span>
+                <div className="price-display">
+                  <span className="price-amount">90</span>
+                  <span className="price-currency">€</span>
+                </div>
+              </div>
+              <ul className="pricing-features">
+                <li className="pricing-feature-item">
+                  <Check size={18} color="var(--color-primary)" />
+                  <span>Fortlaufende, tiefgehende Begleitung</span>
+                </li>
+                <li className="pricing-feature-item">
+                  <Check size={18} color="var(--color-primary)" />
+                  <span>Umgang mit emotionalen Achterbahnfahrten</span>
+                </li>
+                <li className="pricing-feature-item">
+                  <Check size={18} color="var(--color-primary)" />
+                  <span>Medizinische Begriffsaufklärung (IVF/ICSI etc.)</span>
+                </li>
+                <li className="pricing-feature-item">
+                  <Check size={18} color="var(--color-primary)" />
+                  <span>Körper- und Mentalübungen für mehr Gelassenheit</span>
+                </li>
+              </ul>
+              <button 
+                onClick={() => handleOpenBooking('followup')} 
+                className="btn btn-outline" 
+                style={{ width: '100%', marginTop: 'auto' }}
+              >
+                Folgesitzung buchen
+              </button>
+            </div>
+
+            {/* Card 3: 5er-Paket */}
+            <div className="pricing-card featured animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
+              <div className="pricing-card-badge">Empfehlung</div>
+              <div className="pricing-card-header">
+                <h3>5er-Paket</h3>
+                <span className="duration">5 Sitzungen à 60 Min.</span>
+                <div className="price-display">
+                  <span className="price-amount">400</span>
+                  <span className="price-currency">€</span>
+                </div>
+                <span style={{ fontSize: '0.85rem', color: 'var(--color-primary)', fontWeight: 500 }}>Sie sparen 50 € gegenüber Einzelbuchungen</span>
+              </div>
+              <ul className="pricing-features">
+                <li className="pricing-feature-item">
+                  <Check size={18} color="var(--color-primary)" />
+                  <span>Ganzheitliche Begleitung über einen längeren Zeitraum</span>
+                </li>
+                <li className="pricing-feature-item">
+                  <Check size={18} color="var(--color-primary)" />
+                  <span>Flexible Zeiteinteilung nach Ihren Bedürfnissen</span>
+                </li>
+                <li className="pricing-feature-item">
+                  <Check size={18} color="var(--color-primary)" />
+                  <span>Gültigkeit: 1 Jahr ab Kaufdatum</span>
+                </li>
+                <li className="pricing-feature-item">
+                  <Check size={18} color="var(--color-primary)" />
+                  <span>Priorisierte Terminvereinbarung</span>
+                </li>
+                <li className="pricing-feature-item">
+                  <Check size={18} color="var(--color-primary)" />
+                  <span>Zusätzlicher E-Mail-Support zwischen den Sitzungen</span>
+                </li>
+              </ul>
+              <button 
+                onClick={() => handleOpenBooking('package')} 
+                className="btn btn-primary" 
+                style={{ width: '100%', marginTop: 'auto' }}
+              >
+                Paket buchen
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Blog/Ratgeber Section (SEO Focus) */}
       <section id="blog" className="section section-secondary">
         <div className="container">
@@ -238,10 +376,10 @@ function App() {
             <Calendar size={48} color="var(--color-primary)" style={{ margin: '0 auto 24px' }} />
             <h2 className="section-title">Lassen Sie uns ins Gespräch kommen</h2>
             <p className="mb-8" style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)' }}>
-              Der erste Schritt ist oft der schwerste. Buchen Sie hier ganz einfach einen unverbindlichen und kostenfreien 20-minütigen Kennenlerntermin (per Telefon oder Zoom).
+              Der erste Schritt ist oft der schwerste. Buchen Sie hier ganz einfach Ihren Wunschtermin für ein Erstgespräch oder Folgesitzungen (per Telefon oder Zoom).
             </p>
-            <button onClick={() => setIsBookingOpen(true)} className="btn btn-primary" style={{ padding: '16px 36px', fontSize: '1.1rem', cursor: 'pointer' }}>
-              Kennenlerntermin auswählen
+            <button onClick={() => handleOpenBooking()} className="btn btn-primary" style={{ padding: '16px 36px', fontSize: '1.1rem', cursor: 'pointer' }}>
+              Termin online buchen
             </button>
             <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginTop: '24px' }}>
               Ihre Daten werden vertraulich behandelt (Standort DE/DSGVO konform).
@@ -265,8 +403,9 @@ function App() {
               <ul>
                 <li><a href="#about">Über mich</a></li>
                 <li><a href="#services">Leistungen</a></li>
+                <li><a href="#pricing">Preise</a></li>
                 <li><a href="#blog">Ratgeber</a></li>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); setIsBookingOpen(true); }}>Termin buchen</a></li>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); handleOpenBooking(); }}>Termin buchen</a></li>
               </ul>
             </div>
             <div className="footer-col">
@@ -284,7 +423,14 @@ function App() {
         </div>
       </footer>
 
-      <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
+      <BookingModal 
+        isOpen={isBookingOpen} 
+        onClose={() => {
+          setIsBookingOpen(false);
+          setSelectedService(undefined);
+        }} 
+        initialService={selectedService} 
+      />
     </>
   );
 }

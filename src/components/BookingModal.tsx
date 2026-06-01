@@ -1,13 +1,47 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, Clock, Calendar as CalendarIcon, CheckCircle } from 'lucide-react';
 
 interface BookingModalProps {
   isOpen: boolean;
   onClose: () => void;
+  initialService?: 'initial' | 'followup' | 'package';
 }
 
-export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
+interface Service {
+  id: 'initial' | 'followup' | 'package';
+  title: string;
+  duration: string;
+  price: string;
+  description: string;
+}
+
+const SERVICES: Service[] = [
+  {
+    id: 'initial',
+    title: 'Erstgespräch',
+    duration: '60 Minuten',
+    price: '110 €',
+    description: 'Ausführliche Anamnese, Kennenlernen und erste Orientierung'
+  },
+  {
+    id: 'followup',
+    title: 'Folgesitzung',
+    duration: '60 Minuten',
+    price: '90 €',
+    description: 'Tiefgehende Begleitung, emotionale Stütze und Mentalübungen'
+  },
+  {
+    id: 'package',
+    title: '5er-Paket',
+    duration: '5 x 60 Minuten',
+    price: '400 €',
+    description: 'Ganzheitliche Begleitung, flexible Termine (1 Jahr gültig, sparen Sie 50 €)'
+  }
+];
+
+export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, initialService }) => {
   const [step, setStep] = useState(1);
+  const [selectedService, setSelectedService] = useState<'initial' | 'followup' | 'package' | null>(null);
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
@@ -17,6 +51,18 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
     phone: '',
     notes: ''
   });
+
+  useEffect(() => {
+    if (isOpen) {
+      if (initialService) {
+        setSelectedService(initialService);
+        setStep(2); // Start at calendar if service is pre-selected
+      } else {
+        setSelectedService(null);
+        setStep(1); // Start at service selection
+      }
+    }
+  }, [isOpen, initialService]);
 
   if (!isOpen) return null;
 
@@ -48,7 +94,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
     if (newDate < today) return;
     
     setSelectedDate(newDate);
-    setStep(2);
+    setStep(3);
   };
 
   const isDateDisabled = (day: number) => {
@@ -63,7 +109,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
 
   const handleTimeClick = (time: string) => {
     setSelectedTime(time);
-    setStep(3);
+    setStep(4);
   };
 
   // --- Form Logic ---
@@ -76,17 +122,20 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
     e.preventDefault();
     // Simulate API call
     setTimeout(() => {
-      setStep(4);
+      setStep(5);
     }, 800);
   };
 
   const handleClose = () => {
     setStep(1);
+    setSelectedService(null);
     setSelectedDate(null);
     setSelectedTime(null);
     setFormData({ name: '', email: '', phone: '', notes: '' });
     onClose();
   };
+
+  const activeService = SERVICES.find(s => s.id === selectedService);
 
   return (
     <div className="booking-modal-overlay" onClick={handleClose}>
@@ -96,14 +145,60 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
         </button>
 
         <div className="booking-modal-header">
-          <h2>Kostenloses Erstgespräch</h2>
-          {step < 4 && <p className="booking-modal-subtitle">Dauer: 30 Minuten • Online via Zoom</p>}
+          <h2>
+            {activeService 
+              ? `${activeService.title} buchen` 
+              : 'Termin vereinbaren'
+            }
+          </h2>
+          {step < 5 && activeService && (
+            <p className="booking-modal-subtitle">
+              Dauer: {activeService.duration} • Preis: {activeService.price} • Online via Zoom
+            </p>
+          )}
+          {step < 5 && !activeService && (
+            <p className="booking-modal-subtitle">Bitte wählen Sie das gewünschte Angebot aus</p>
+          )}
         </div>
 
         <div className="booking-modal-body">
-          {/* STEP 1: Date Selection */}
+          {/* STEP 1: Service Selection */}
           {step === 1 && (
+            <div className="booking-step booking-services-step animate-fade-in">
+              <div className="service-options">
+                {SERVICES.map(service => (
+                  <button 
+                    key={service.id}
+                    className={`service-option-card ${selectedService === service.id ? 'selected' : ''}`}
+                    onClick={() => {
+                      setSelectedService(service.id);
+                      setStep(2);
+                    }}
+                  >
+                    <div className="service-option-radio">
+                      <div className="service-option-radio-inner"></div>
+                    </div>
+                    <div className="service-option-info">
+                      <div className="service-option-title">{service.title}</div>
+                      <div className="service-option-desc">{service.description}</div>
+                    </div>
+                    <div className="service-option-price">
+                      {service.price}
+                      <span>/{service.id === 'package' ? 'Paket' : 'Sitz.'}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* STEP 2: Date Selection */}
+          {step === 2 && (
             <div className="booking-step booking-calendar-step animate-fade-in">
+              <button className="back-button" onClick={() => setStep(1)}>
+                <ChevronLeft size={16} /> Zurück zur Leistungsauswahl
+              </button>
+              
               <div className="calendar-header">
                 <button onClick={handlePrevMonth} className="calendar-nav-btn"><ChevronLeft size={20} /></button>
                 <h3>{monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()}</h3>
@@ -139,10 +234,10 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
             </div>
           )}
 
-          {/* STEP 2: Time Selection */}
-          {step === 2 && selectedDate && (
+          {/* STEP 3: Time Selection */}
+          {step === 3 && selectedDate && (
             <div className="booking-step booking-time-step animate-fade-in">
-              <button className="back-button" onClick={() => setStep(1)}>
+              <button className="back-button" onClick={() => setStep(2)}>
                 <ChevronLeft size={16} /> Zurück zum Kalender
               </button>
               
@@ -166,14 +261,17 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
             </div>
           )}
 
-          {/* STEP 3: Form */}
-          {step === 3 && selectedDate && selectedTime && (
+          {/* STEP 4: Form */}
+          {step === 4 && selectedDate && selectedTime && (
             <div className="booking-step booking-form-step animate-fade-in">
-               <button className="back-button" onClick={() => setStep(2)}>
+               <button className="back-button" onClick={() => setStep(3)}>
                 <ChevronLeft size={16} /> Zurück zur Uhrzeit
               </button>
               
               <div className="booking-summary">
+                <div className="summary-item" style={{ fontSize: '1rem', color: 'var(--color-primary)', fontWeight: 600, marginBottom: '4px' }}>
+                  <span>Ausgewählt: {activeService?.title} ({activeService?.price})</span>
+                </div>
                 <div className="summary-item">
                   <CalendarIcon size={16} />
                   <span>{selectedDate.toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
@@ -201,24 +299,24 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                   <label htmlFor="notes">Nachricht (optional)</label>
                   <textarea id="notes" name="notes" rows={3} value={formData.notes} onChange={handleInputChange} placeholder="Möchten Sie mir vorab etwas mitteilen?"></textarea>
                 </div>
-                <button type="submit" className="button button-primary w-full" style={{ marginTop: '16px' }}>
+                <button type="submit" className="btn btn-primary" style={{ marginTop: '16px', display: 'block', width: '100%' }}>
                   Termin verbindlich anfragen
                 </button>
               </form>
             </div>
           )}
 
-          {/* STEP 4: Success */}
-          {step === 4 && (
+          {/* STEP 5: Success */}
+          {step === 5 && (
             <div className="booking-step booking-success-step animate-fade-in">
               <div className="success-icon-wrapper">
                 <CheckCircle size={48} color="var(--color-primary)" />
               </div>
               <h3>Vielen Dank für Ihre Anfrage!</h3>
-              <p>Ihr Termin für das kostenlose Erstgespräch am <strong>{selectedDate?.toLocaleDateString('de-DE', { day: 'numeric', month: 'long' })} um {selectedTime} Uhr</strong> wurde erfolgreich reserviert.</p>
-              <p className="success-subtext">Sie erhalten in Kürze eine Bestätigung per E-Mail mit allen weiteren Informationen zum Zoom-Meeting.</p>
+              <p>Ihr Termin für das <strong>{activeService?.title}</strong> am <strong>{selectedDate?.toLocaleDateString('de-DE', { day: 'numeric', month: 'long' })} um {selectedTime} Uhr</strong> wurde erfolgreich reserviert.</p>
+              <p className="success-subtext">Sie erhalten in Kürze eine Bestätigung per E-Mail mit allen weiteren Informationen zum Zoom-Meeting sowie zur Bezahlung.</p>
               
-              <button className="button button-outline w-full" onClick={handleClose} style={{ marginTop: '24px' }}>
+              <button className="btn btn-outline" onClick={handleClose} style={{ marginTop: '24px', width: '100%' }}>
                 Schließen
               </button>
             </div>
