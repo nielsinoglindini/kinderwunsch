@@ -74,7 +74,7 @@ function App() {
           <div className="hero-image-wrapper animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
             <div className="hero-blob"></div>
             <img 
-              src="/hero.png" 
+              src="hero.jpg" 
               alt="Kathrin - Ihre Kinderwunschbegleiterin" 
               className="hero-image"
             />
