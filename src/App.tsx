@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Heart, Activity, Leaf, Calendar, ArrowRight, Menu, Check } from 'lucide-react';
+import { Heart, Activity, Leaf, Calendar, ArrowRight, Menu, Check, Stethoscope, Star, Compass } from 'lucide-react';
 import { BookingModal } from './components/BookingModal';
 import './index.css';
 
@@ -87,18 +87,18 @@ function App() {
         <div className="container about-grid">
           <div className="animate-on-scroll">
             {/* Visual element or secondary image placeholder */}
-            <h2 className="section-title">Wer steckt dahinter?</h2>
+            <h2 className="section-title">Wer dich auf deinem Weg begleitet</h2>
             <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-primary)', marginBottom: '32px' }}></div>
             <div className="about-text">
               <p>
-                Mein Name ist Kathrin. Ich weiß aus eigener Erfahrung, dass der Weg zum Wunschkind nicht immer gerade verläuft. Oft fühlt man sich unverstanden oder allein gelassen von dem medizinischen System, das zwar technisch hervorragend ist, aber oft nicht die emotionale Kapazität hat, die Sie jetzt brauchen.
+                Der Weg zum Wunschkind ist oft kein gerader Strich auf einem Test. Manchmal ist er ein jahrelanger, kräftezehrender Marathon. Ich kenne diesen Weg nicht nur aus Lehrbüchern – ich bin ihn selbst acht Jahre lang gegangen. Aus tiefster eigener Erfahrung weiß ich, wie sich das Bangen, die Trauer und die schmerzhaften Rückschläge anfühlen.
               </p>
               <p>
-                Ich habe es mir zur Lebensaufgabe gemacht, Frauen und Paare auf diesem sensiblen Weg zu begleiten. Egal ob nach einer Fehlgeburt, in der Entscheidungsphase zur künstlichen Befruchtung (IVF/ICSI) oder einfach, wenn die Seele eine Pause braucht.
+                Genau deshalb habe ich es mir zur Lebensaufgabe gemacht, Frauen und Paare auf diesem sensiblen Weg zu begleiten und einen Raum für dich zu schaffen, in dem deine Seele endlich wieder zur Ruhe kommen darf.
               </p>
-            </div>
-            <div className="about-highlight">
-              "Es braucht ein Dorf, um auf diesem Weg nicht den Mut zu verlieren. Ich bin für Sie da."
+              <p>
+                Hier fällt der ständige Optimierungsdruck von dir ab. Alle Gefühle haben ihren berechtigten Platz: die Wut, die Verzweiflung, die Trauer – aber auch die leise, unerschütterliche Hoffnung. Und genau in dieser Hoffnung liegt deine 
+              </p>
             </div>
           </div>
           <div className="animate-on-scroll" style={{ paddingLeft: '24px' }}>
@@ -140,42 +140,78 @@ function App() {
       <section id="services" className="section">
         <div className="container">
           <div className="text-center animate-on-scroll">
-            <h2 className="section-title">Meine Leistungen</h2>
+            <h2 className="section-title">Meine Leistungen für dich</h2>
             <p className="section-subtitle">
-              Individuelle Begleitung, die genau da ansetzt, wo Sie sich gerade auf Ihrem Weg befinden.
+              Ich begleite dich sicher, einfühlsam und absolut urteilsfrei durch deine individuelle Situation:
             </p>
           </div>
           
           <div className="services-grid">
             <div className="service-card animate-on-scroll">
               <div className="service-icon">
-                <Menu size={28} /> {/* Placeholder for consultation icon */}
+                <Stethoscope size={28} />
               </div>
-              <h3>Beratung</h3>
+              <h3>Kinderwunschbehandlung</h3>
               <p>
-                Klärendes Gespräch vor dem ersten Termin in der Kinderwunschklinik. Wir besprechen gemeinsam Ihre Fragen, erklären Fachbegriffe wie IVF oder ICSI ganz einfach und nehmen Ihnen die erste Angst.
+                Vorbereitung und Begleitung deiner IUI, IVF oder ICSI.
+              </p>
+            </div>
+            
+            <div className="service-card animate-on-scroll" style={{ transitionDelay: '0.05s' }}>
+              <div className="service-icon">
+                <Heart size={28} />
+              </div>
+              <h3>Gefühlschaos & Sorgen</h3>
+              <p>
+                Umgang mit Ängsten während und nach der Schwangerschaft.
               </p>
             </div>
             
             <div className="service-card animate-on-scroll" style={{ transitionDelay: '0.1s' }}>
               <div className="service-icon">
-                <Heart size={28} />
+                <Star size={28} />
               </div>
-              <h3>Begleitung</h3>
+              <h3>Sternenkind-Begleitung</h3>
               <p>
-                Der Weg ist oft ein Marathon emotionaler Höhen und Tiefen. Ich begleite Sie durch Wartezyklen, Behandlungsphasen und bin Ihre emotionale Stütze, wenn das Umfeld Sie gerade nicht versteht.
+                Halt und Verarbeitung bei Fehlgeburten oder Totgeburten.
               </p>
             </div>
-            
+
+            <div className="service-card animate-on-scroll" style={{ transitionDelay: '0.15s' }}>
+              <div className="service-icon">
+                <Compass size={28} />
+              </div>
+              <h3>Abschied & Neuorientierung</h3>
+              <p>
+                Loslassen des Kinderwunsches und das Erarbeiten eines behutsamen „Plan B“ (z. B. Adoption, Pflegschaft).
+              </p>
+            </div>
+
             <div className="service-card animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
+              <div className="service-icon">
+                <Activity size={28} />
+              </div>
+              <h3>Körper & Diagnose</h3>
+              <p>
+                Leben und Kraft finden mit Endometriose bei Kinderwunsch.
+              </p>
+            </div>
+
+            <div className="service-card animate-on-scroll" style={{ transitionDelay: '0.25s' }}>
               <div className="service-icon">
                 <Leaf size={28} />
               </div>
-              <h3>Coaching nach Verlust</h3>
+              <h3>Alternative Wege</h3>
               <p>
-                Raum für Trauer und Neuorientierung. Wenn Sie eine Fehlgeburt erlitten haben, hilft es oft, behutsam neue Kraft zu schöpfen und dem eigenen Körper wieder zu vertrauen.
+                Beratung und Begleitung bei Samen- oder Eizellspende (Gametenspende).
               </p>
             </div>
+          </div>
+
+          <div className="text-center animate-on-scroll" style={{ marginTop: '48px' }}>
+            <p style={{ fontSize: '1.2rem', fontWeight: 500, color: 'var(--color-text-main)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
+              Ganz egal, an welchem Punkt du gerade stehst: Wir schauen gemeinsam, was du JETZT brauchst, um wieder in deine Kraft zu finden.
+            </p>
           </div>
         </div>
       </section>
