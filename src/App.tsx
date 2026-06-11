@@ -97,7 +97,7 @@ function App() {
                 Genau deshalb habe ich es mir zur Lebensaufgabe gemacht, Frauen und Paare auf diesem sensiblen Weg zu begleiten und einen Raum für dich zu schaffen, in dem deine Seele endlich wieder zur Ruhe kommen darf.
               </p>
               <p>
-                Hier fällt der ständige Optimierungsdruck von dir ab. Alle Gefühle haben ihren berechtigten Platz: die Wut, die Verzweiflung, die Trauer – aber auch die leise, unerschütterliche Hoffnung. Und genau in dieser Hoffnung liegt deine 
+                Hier fällt der ständige Optimierungsdruck von dir ab. Alle Gefühle haben ihren berechtigten Platz: die Wut, die Verzweiflung, die Trauer – aber auch die leise, unerschütterliche Hoffnung. Und genau in dieser Hoffnung liegt deine Kraft: Gemeinsam gehen wir Schritt für Schritt vorwärts, im tiefen Vertrauen darauf, dass dein Weg ein gutes Ziel finden wird.
               </p>
             </div>
           </div>
