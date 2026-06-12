@@ -21,22 +21,15 @@ const SERVICES: Service[] = [
     id: 'initial',
     title: 'Erstgespräch',
     duration: '60 Minuten',
-    price: '110 €',
-    description: 'Ausführliche Anamnese, Kennenlernen und erste Orientierung'
+    price: '120 €',
+    description: 'Brennende Fragen & Sorgen sortieren, Klarheit & Erleichterung finden'
   },
   {
     id: 'followup',
-    title: 'Folgesitzung',
+    title: 'Folgegespräche',
     duration: '60 Minuten',
-    price: '90 €',
-    description: 'Tiefgehende Begleitung, emotionale Stütze und Mentalübungen'
-  },
-  {
-    id: 'package',
-    title: '5er-Paket',
-    duration: '5 x 60 Minuten',
-    price: '400 €',
-    description: 'Ganzheitliche Begleitung, flexible Termine (1 Jahr gültig, sparen Sie 50 €)'
+    price: '110 €',
+    description: 'Fortlaufende, tiefgehende Wegbegleitung Schritt für Schritt'
   }
 ];
 

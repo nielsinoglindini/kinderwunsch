@@ -206,8 +206,21 @@ function App() {
           </div>
 
           <div className="text-center animate-on-scroll" style={{ marginTop: '48px' }}>
-            <p style={{ fontSize: '1.2rem', fontWeight: 500, color: 'var(--color-text-main)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
+            <p style={{ fontSize: '1.2rem', fontWeight: 'normal', color: 'var(--color-text-main)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
               Ganz egal, an welchem Punkt du gerade stehst: Wir schauen gemeinsam, was du JETZT brauchst, um wieder in deine Kraft zu finden.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why I can strengthen you Section */}
+      <section className="section section-secondary">
+        <div className="container">
+          <div className="text-center animate-on-scroll" style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <h2 className="section-title">Warum ich dich auf deinem Weg stärken kann</h2>
+            <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-primary)', margin: '0 auto 32px' }}></div>
+            <p style={{ fontSize: '1.15rem', lineHeight: '1.8', color: 'var(--color-text-main)' }}>
+              Ich bin Kathrin, ausgebildete ganzheitliche Kinderwunschberaterin, Business Coach und habe 10 Jahre Erfahrung in der Persönlichkeitsentwicklung von jungen Erwachsenen. Mit dieser Verbindung aus tiefem Mitgefühl und professioneller Struktur begleite ich dich dabei, um dir in einer emotionalen Zeit die Stabilität und das Vertrauen zurückzugeben, das du gerade brauchst. Aus eigener Erfahrung weiß ich, wie viel Kraft in dir steckt – lass’ sie uns gemeinsam wieder sichtbar machen!
             </p>
           </div>
         </div>
@@ -217,9 +230,9 @@ function App() {
       <section id="pricing" className="section section-light">
         <div className="container">
           <div className="text-center animate-on-scroll">
-            <h2 className="section-title">Preise & Angebote</h2>
+            <h2 className="section-title">Was du erwarten kannst und dafür investierst</h2>
             <p className="section-subtitle">
-              Transparente Preisgestaltung für eine verlässliche und liebevolle Unterstützung auf Ihrem individuellen Weg.
+              Transparente Preisgestaltung für eine verlässliche und liebevolle Unterstützung auf deinem individuellen Weg.
             </p>
           </div>
 
@@ -228,30 +241,31 @@ function App() {
             <div className="pricing-card animate-on-scroll">
               <div className="pricing-card-header">
                 <h3>Erstgespräch</h3>
-                <span className="duration">Dauer: 60 Minuten</span>
                 <div className="price-display">
-                  <span className="price-amount">110</span>
+                  <span className="price-amount">120</span>
                   <span className="price-currency">€</span>
                 </div>
               </div>
-              <ul className="pricing-features">
-                <li className="pricing-feature-item">
-                  <Check size={18} color="var(--color-primary)" />
-                  <span>Ausführliche Anamnese und Kennenlernen</span>
-                </li>
-                <li className="pricing-feature-item">
-                  <Check size={18} color="var(--color-primary)" />
-                  <span>Klärung Ihrer dringlichsten Fragen</span>
-                </li>
-                <li className="pricing-feature-item">
-                  <Check size={18} color="var(--color-primary)" />
-                  <span>Erste Orientierung und nächste Schritte</span>
-                </li>
-                <li className="pricing-feature-item">
-                  <Check size={18} color="var(--color-primary)" />
-                  <span>Persönlich, per Telefon oder Zoom-Meeting</span>
-                </li>
-              </ul>
+              <p className="pricing-description" style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '24px' }}>
+                Der Kinderwunschweg kann emotional aufwühlend sein und brennende Fragen oder Sorgen hinterlassen, die dich gedanklich kaum zur Ruhe kommen lassen. In unserem Erstgespräch schenke ich dir einen geschützten, bewertungsfreien Raum, in dem alles, was dich aktuell belastet, laut ausgesprochen und sortiert werden darf. Gemeinsam ordnen wir das Chaos im Kopf, damit du schon nach dem ersten Gespräch mit spürbar mehr Klarheit, Erleichterung und einem sicheren Gefühl für deine nächsten Schritte nach Hause gehst. Lass uns den ersten Schritt gemeinsam machen.
+              </p>
+              <div style={{ borderTop: '1px solid var(--color-bg-secondary)', paddingTop: '20px', marginBottom: '24px' }}>
+                <h4 style={{ fontSize: '1rem', marginBottom: '12px', fontWeight: 600 }}>Mein Angebot für dich:</h4>
+                <ul className="pricing-features" style={{ margin: 0 }}>
+                  <li className="pricing-feature-item">
+                    <Check size={18} color="var(--color-primary)" />
+                    <span><strong>Dauer:</strong> 60 Minuten</span>
+                  </li>
+                  <li className="pricing-feature-item">
+                    <Check size={18} color="var(--color-primary)" />
+                    <span><strong>Kosten:</strong> 120 € (einzeln oder als Paar)</span>
+                  </li>
+                  <li className="pricing-feature-item">
+                    <Check size={18} color="var(--color-primary)" />
+                    <span><strong>Ort:</strong> in Präsenz oder online via Zoom</span>
+                  </li>
+                </ul>
+              </div>
               <button 
                 onClick={() => handleOpenBooking('initial')} 
                 className="btn btn-outline" 
@@ -261,83 +275,41 @@ function App() {
               </button>
             </div>
 
-            {/* Card 2: Folgesitzung */}
+            {/* Card 2: Folgegespräche */}
             <div className="pricing-card animate-on-scroll" style={{ transitionDelay: '0.1s' }}>
               <div className="pricing-card-header">
-                <h3>Folgesitzung</h3>
-                <span className="duration">Dauer: 60 Minuten</span>
+                <h3>Folgegespräche</h3>
                 <div className="price-display">
-                  <span className="price-amount">90</span>
+                  <span className="price-amount">110</span>
                   <span className="price-currency">€</span>
                 </div>
               </div>
-              <ul className="pricing-features">
-                <li className="pricing-feature-item">
-                  <Check size={18} color="var(--color-primary)" />
-                  <span>Fortlaufende, tiefgehende Begleitung</span>
-                </li>
-                <li className="pricing-feature-item">
-                  <Check size={18} color="var(--color-primary)" />
-                  <span>Umgang mit emotionalen Achterbahnfahrten</span>
-                </li>
-                <li className="pricing-feature-item">
-                  <Check size={18} color="var(--color-primary)" />
-                  <span>Medizinische Begriffsaufklärung (IVF/ICSI etc.)</span>
-                </li>
-                <li className="pricing-feature-item">
-                  <Check size={18} color="var(--color-primary)" />
-                  <span>Körper- und Mentalübungen für mehr Gelassenheit</span>
-                </li>
-              </ul>
+              <p className="pricing-description" style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '24px' }}>
+                Du merkst nach dem Erstgespräch, dass du dir eine weiterführende, intensive Wegbegleitung wünschst? Nachdem wir im Erstgespräch die Basis gelegt haben, gehen wir in einem oder mehreren Folgegesprächen Schritt für Schritt weiter. Wir nehmen uns den Raum für deine aktuellen Fragen, sortieren die nächsten medizinischen oder emotionalen Schritte und fangen aufkommende Sorgen und Ängste direkt auf. Dabei knüpfen wir genau dort an, wo du gerade stehst und dir Begleitung wünschst.
+              </p>
+              <div style={{ borderTop: '1px solid var(--color-bg-secondary)', paddingTop: '20px', marginBottom: '24px' }}>
+                <h4 style={{ fontSize: '1rem', marginBottom: '12px', fontWeight: 600 }}>Mein Angebot für dich:</h4>
+                <ul className="pricing-features" style={{ margin: 0 }}>
+                  <li className="pricing-feature-item">
+                    <Check size={18} color="var(--color-primary)" />
+                    <span><strong>Dauer:</strong> 60 Minuten</span>
+                  </li>
+                  <li className="pricing-feature-item">
+                    <Check size={18} color="var(--color-primary)" />
+                    <span><strong>Kosten:</strong> 110 € (einzeln oder als Paar)</span>
+                  </li>
+                  <li className="pricing-feature-item">
+                    <Check size={18} color="var(--color-primary)" />
+                    <span><strong>Ort:</strong> in Präsenz oder online via Zoom</span>
+                  </li>
+                </ul>
+              </div>
               <button 
                 onClick={() => handleOpenBooking('followup')} 
                 className="btn btn-outline" 
                 style={{ width: '100%', marginTop: 'auto' }}
               >
-                Folgesitzung buchen
-              </button>
-            </div>
-
-            {/* Card 3: 5er-Paket */}
-            <div className="pricing-card featured animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
-              <div className="pricing-card-badge">Empfehlung</div>
-              <div className="pricing-card-header">
-                <h3>5er-Paket</h3>
-                <span className="duration">5 Sitzungen à 60 Min.</span>
-                <div className="price-display">
-                  <span className="price-amount">400</span>
-                  <span className="price-currency">€</span>
-                </div>
-                <span style={{ fontSize: '0.85rem', color: 'var(--color-primary)', fontWeight: 500 }}>Sie sparen 50 € gegenüber Einzelbuchungen</span>
-              </div>
-              <ul className="pricing-features">
-                <li className="pricing-feature-item">
-                  <Check size={18} color="var(--color-primary)" />
-                  <span>Ganzheitliche Begleitung über einen längeren Zeitraum</span>
-                </li>
-                <li className="pricing-feature-item">
-                  <Check size={18} color="var(--color-primary)" />
-                  <span>Flexible Zeiteinteilung nach Ihren Bedürfnissen</span>
-                </li>
-                <li className="pricing-feature-item">
-                  <Check size={18} color="var(--color-primary)" />
-                  <span>Gültigkeit: 1 Jahr ab Kaufdatum</span>
-                </li>
-                <li className="pricing-feature-item">
-                  <Check size={18} color="var(--color-primary)" />
-                  <span>Priorisierte Terminvereinbarung</span>
-                </li>
-                <li className="pricing-feature-item">
-                  <Check size={18} color="var(--color-primary)" />
-                  <span>Zusätzlicher E-Mail-Support zwischen den Sitzungen</span>
-                </li>
-              </ul>
-              <button 
-                onClick={() => handleOpenBooking('package')} 
-                className="btn btn-primary" 
-                style={{ width: '100%', marginTop: 'auto' }}
-              >
-                Paket buchen
+                Folgegespräch buchen
               </button>
             </div>
           </div>
