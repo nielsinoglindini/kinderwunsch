@@ -58,9 +58,9 @@ function App() {
       <header className="hero">
         <div className="container hero-content">
           <div className="hero-text animate-on-scroll">
-            <h1>Du bist nicht allein auf diesem Weg.</h1>
+            <h1>Du musst diesen Weg nicht alleine gehen.</h1>
             <p>
-              Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer biete ich Ihnen einen sicheren Raum. Mit Empathie, Erfahrung und Herz bin ich an Ihrer Seite.
+              Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer begleite ich dich auf deinem Weg zum Wunschkind – mit Empathie, Erfahrung und Herz bin ich an deiner Seite.
             </p>
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
               <button onClick={() => handleOpenBooking('initial')} className="btn btn-primary" style={{ cursor: 'pointer' }}>
@@ -91,13 +91,10 @@ function App() {
             <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-primary)', marginBottom: '32px' }}></div>
             <div className="about-text">
               <p>
-                Der Weg zum Wunschkind ist oft kein gerader Strich auf einem Test. Manchmal ist er ein jahrelanger, kräftezehrender Marathon. Ich kenne diesen Weg nicht nur aus Lehrbüchern – ich bin ihn selbst acht Jahre lang gegangen. Aus tiefster eigener Erfahrung weiß ich, wie sich das Bangen, die Trauer und die schmerzhaften Rückschläge anfühlen.
+                Der Weg zum Wunschkind ist oft kein gerader Strich auf einem Test. Manchmal ist er ein jahrelanger, kräftezehrender Marathon. Ich kenne diesen Weg nicht nur aus Lehrbüchern, von Freunden oder Kollegen – ich bin ihn selbst acht Jahre lang gegangen. Aus tiefster eigener Erfahrung weiß ich, wie sich das Bangen, die Trauer und die schmerzhaften Rückschläge anfühlen. Etwas, das vermeintlich so einfach scheint - schwanger zu werden - wird zu einer scheinbar unlösbaren und unkontrollierbaren Situation. Ich selbst habe mich damals so ohnmächtig gefühlt und hätte all’ meine Fragen, Gedanken & Ängste gerne mit jemandem geteilt, der einen ganzheitlichen Blick auf das Thema Kinderwunsch wirft und mich empathisch und professionell begleitet.
               </p>
               <p>
-                Genau deshalb habe ich es mir zur Lebensaufgabe gemacht, Frauen und Paare auf diesem sensiblen Weg zu begleiten und einen Raum für dich zu schaffen, in dem deine Seele endlich wieder zur Ruhe kommen darf.
-              </p>
-              <p>
-                Hier fällt der ständige Optimierungsdruck von dir ab. Alle Gefühle haben ihren berechtigten Platz: die Wut, die Verzweiflung, die Trauer – aber auch die leise, unerschütterliche Hoffnung. Und genau in dieser Hoffnung liegt deine Kraft: Gemeinsam gehen wir Schritt für Schritt vorwärts, im tiefen Vertrauen darauf, dass dein Weg ein gutes Ziel finden wird.
+                Genau deshalb habe ich es mir zur Lebensaufgabe gemacht, Frauen und Paare auf diesem sensiblen Weg zu begleiten und einen Raum für dich zu schaffen, in dem deine Seele endlich wieder zur Ruhe kommen darf. Alle Gefühle haben im Gespräch ihren berechtigten Platz: Trauer – aber auch die leise, unerschütterliche Hoffnung. Und genau in dieser Hoffnung liegt deine Kraft: Gemeinsam gehen wir Schritt für Schritt vorwärts, im tiefen Vertrauen darauf, dass dein Weg ein gutes Ziel finden wird.
               </p>
             </div>
           </div>
@@ -140,7 +137,7 @@ function App() {
       <section id="services" className="section">
         <div className="container">
           <div className="text-center animate-on-scroll">
-            <h2 className="section-title">Meine Leistungen für dich</h2>
+            <h2 className="section-title">Wie ich dich unterstützen kann</h2>
             <p className="section-subtitle">
               Ich begleite dich sicher, einfühlsam und absolut urteilsfrei durch deine individuelle Situation:
             </p>
@@ -163,7 +160,7 @@ function App() {
               </div>
               <h3>Gefühlschaos & Sorgen</h3>
               <p>
-                Umgang mit Ängsten während und nach der Schwangerschaft.
+                Umgang mit Ängsten vor, während und nach der Schwangerschaft.
               </p>
             </div>
             
@@ -173,7 +170,7 @@ function App() {
               </div>
               <h3>Sternenkind-Begleitung</h3>
               <p>
-                Halt und Verarbeitung bei Fehlgeburten oder Totgeburten.
+                Halt und Verarbeitung bei Verlust deines Wunders.
               </p>
             </div>
 
@@ -183,7 +180,7 @@ function App() {
               </div>
               <h3>Abschied & Neuorientierung</h3>
               <p>
-                Loslassen des Kinderwunsches und das Erarbeiten eines behutsamen „Plan B“ (z. B. Adoption, Pflegschaft).
+                Loslassen des Kinderwunsches und das Erarbeiten eines möglichen „Plan B“ (z. B. Adoption, Pflegschaft).
               </p>
             </div>
 
