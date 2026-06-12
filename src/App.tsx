@@ -59,6 +59,9 @@ function App() {
         <div className="container hero-content">
           <div className="hero-text animate-on-scroll">
             <h1>Du musst diesen Weg nicht alleine gehen.</h1>
+            <p className="hero-subtitle">
+              Deine ganzheitliche Begleitung im Kinderwunsch
+            </p>
             <p>
               Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer begleite ich dich auf deinem Weg zum Wunschkind – mit Empathie, Erfahrung und Herz bin ich an deiner Seite.
             </p>
