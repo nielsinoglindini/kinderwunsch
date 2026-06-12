@@ -214,7 +214,7 @@ function App() {
       </section>
 
       {/* Why I can strengthen you Section */}
-      <section className="section section-secondary">
+      <section className="section section-light">
         <div className="container">
           <div className="text-center animate-on-scroll" style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="section-title">Warum ich dich auf deinem Weg stärken kann</h2>
@@ -227,7 +227,7 @@ function App() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="section section-light">
+      <section id="pricing" className="section">
         <div className="container">
           <div className="text-center animate-on-scroll">
             <h2 className="section-title">Was du erwarten kannst und dafür investierst</h2>
