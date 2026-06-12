@@ -219,9 +219,57 @@ function App() {
           <div className="text-center animate-on-scroll" style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="section-title">Warum ich dich auf deinem Weg stärken kann</h2>
             <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-primary)', margin: '0 auto 32px' }}></div>
-            <p style={{ fontSize: '1.15rem', lineHeight: '1.8', color: 'var(--color-text-main)' }}>
+            <p style={{ fontSize: '1.15rem', lineHeight: '1.8', color: 'var(--color-text-main)', marginBottom: '32px' }}>
               Ich bin Kathrin, ausgebildete ganzheitliche Kinderwunschberaterin, Business Coach und habe 10 Jahre Erfahrung in der Persönlichkeitsentwicklung von jungen Erwachsenen. Mit dieser Verbindung aus tiefem Mitgefühl und professioneller Struktur begleite ich dich dabei, um dir in einer emotionalen Zeit die Stabilität und das Vertrauen zurückzugeben, das du gerade brauchst. Aus eigener Erfahrung weiß ich, wie viel Kraft in dir steckt – lass’ sie uns gemeinsam wieder sichtbar machen!
             </p>
+            
+            {/* Certification Badge */}
+            <div className="certification-badge" style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '16px',
+              padding: '16px 24px',
+              borderRadius: 'var(--radius-md)',
+              border: '1px solid rgba(212, 184, 177, 0.3)',
+              backgroundColor: 'var(--color-surface)',
+              boxShadow: 'var(--shadow-sm)',
+              textAlign: 'left',
+              maxWidth: '340px',
+              margin: '0 auto'
+            }}>
+              <div style={{ flexShrink: 0 }}>
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="24" cy="24" r="22" fill="#FDFBFA" stroke="var(--color-primary)" strokeWidth="1.5" />
+                  <circle cx="24" cy="24" r="19" fill="none" stroke="var(--color-accent)" strokeWidth="0.75" strokeDasharray="3 2" />
+                  <path d="M24 14 C24 14 20 10 17 13 C14 16 17 21 24 27 C31 21 34 16 31 13 C28 10 24 14 24 14 Z" fill="var(--color-primary)" opacity="0.85" />
+                  <path d="M24 23 L26 34 L24 32 L22 34 Z" fill="var(--color-primary)" />
+                  <path d="M20 25 L15 33 L18 32 L20 30 Z" fill="var(--color-accent)" />
+                  <path d="M28 25 L33 33 L30 32 L28 30 Z" fill="var(--color-accent)" />
+                </svg>
+              </div>
+              <div>
+                <div style={{
+                  fontFamily: 'var(--font-heading)',
+                  fontSize: '0.7rem',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.15em',
+                  color: 'var(--color-primary)',
+                  fontWeight: 600,
+                  marginBottom: '2px'
+                }}>
+                  Ausbildung & Siegel
+                </div>
+                <div style={{
+                  fontFamily: 'var(--font-heading)',
+                  fontSize: '1.05rem',
+                  fontWeight: 600,
+                  color: 'var(--color-text-main)',
+                  lineHeight: '1.2'
+                }}>
+                  Zertifizierte Kinderwunschberaterin
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
