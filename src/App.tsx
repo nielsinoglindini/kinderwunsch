@@ -188,8 +188,8 @@ function App() {
           </div>
 
           <div className="text-center animate-on-scroll" style={{ marginTop: '48px' }}>
-            <p style={{ fontSize: '1.2rem', fontWeight: 'normal', color: 'var(--color-text-main)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
-              Ganz egal, an welchem Punkt du gerade stehst: Wir schauen gemeinsam, was du JETZT brauchst, um wieder in deine Kraft zu finden.
+            <p style={{ fontSize: '1.125rem', color: 'var(--color-text-muted)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
+              Ganz egal, an welchem Punkt du gerade stehst: Wir schauen gemeinsam, was du jetzt brauchst, um wieder in deine Kraft zu finden.
             </p>
           </div>
         </div>
@@ -197,10 +197,11 @@ function App() {
 
       {/* Why I can strengthen you Section */}
       <section className="section section-light">
-        <div className="container">
-          <div className="text-center animate-on-scroll" style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <div className="container strengthen-grid">
+          {/* Left: Text Content */}
+          <div className="animate-on-scroll" style={{ textAlign: 'left' }}>
             <h2 className="section-title">Warum ich dich auf deinem Weg stärken kann</h2>
-            <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-primary)', margin: '0 auto 32px' }}></div>
+            <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-primary)', marginBottom: '32px' }}></div>
             <p style={{ fontSize: '1.15rem', lineHeight: '1.8', color: 'var(--color-text-main)', marginBottom: '32px' }}>
               Ich bin Kathrin, ausgebildete ganzheitliche Kinderwunschberaterin, Business Coach und habe 10 Jahre Erfahrung in der Persönlichkeitsentwicklung von jungen Erwachsenen. Mit dieser Verbindung aus tiefem Mitgefühl und professioneller Struktur begleite ich dich dabei, um dir in einer emotionalen Zeit die Stabilität und das Vertrauen zurückzugeben, das du gerade brauchst. Aus eigener Erfahrung weiß ich, wie viel Kraft in dir steckt – lass’ sie uns gemeinsam wieder sichtbar machen!
             </p>
@@ -216,8 +217,7 @@ function App() {
               backgroundColor: 'var(--color-surface)',
               boxShadow: 'var(--shadow-sm)',
               textAlign: 'left',
-              maxWidth: '340px',
-              margin: '0 auto'
+              maxWidth: '340px'
             }}>
               <div style={{ flexShrink: 0 }}>
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -253,6 +253,17 @@ function App() {
               </div>
             </div>
           </div>
+
+          {/* Right: Bild/Grafik Platzhalter */}
+          <div className="animate-on-scroll">
+            <div className="strengthen-image-wrapper">
+              <img 
+                src="strengthen_graphic.png" 
+                alt="Wachstum und Unterstützung im Kinderwunsch" 
+                className="strengthen-image"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -272,12 +283,11 @@ function App() {
               <div className="pricing-card-header">
                 <h3>Erstgespräch</h3>
                 <div className="price-display">
-                  <span className="price-amount">120</span>
-                  <span className="price-currency">€</span>
+                  <span className="price-amount">€</span>
                 </div>
               </div>
               <p className="pricing-description" style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '24px' }}>
-                Der Kinderwunschweg kann emotional aufwühlend sein und brennende Fragen oder Sorgen hinterlassen, die dich gedanklich kaum zur Ruhe kommen lassen. In unserem Erstgespräch schenke ich dir einen geschützten, bewertungsfreien Raum, in dem alles, was dich aktuell belastet, laut ausgesprochen und sortiert werden darf. Gemeinsam ordnen wir das Chaos im Kopf, damit du schon nach dem ersten Gespräch mit spürbar mehr Klarheit, Erleichterung und einem sicheren Gefühl für deine nächsten Schritte nach Hause gehst. Lass uns den ersten Schritt gemeinsam machen.
+                Der Kinderwunschweg kann emotional aufwühlend sein und <strong>brennende Fragen</strong> oder <strong>Sorgen</strong> hinterlassen, die dich gedanklich kaum zur Ruhe kommen lassen. In unserem Erstgespräch schenke ich dir einen geschützten, bewertungsfreien Raum, in dem alles, was dich aktuell belastet, laut ausgesprochen und sortiert werden darf. Gemeinsam ordnen wir das <strong>Chaos im Kopf</strong>, damit du schon nach dem ersten Gespräch mit spürbar mehr <strong>Klarheit</strong>, <strong>Erleichterung</strong> und einem sicheren Gefühl für deine nächsten Schritte nach Hause gehst. Lass uns den ersten Schritt gemeinsam machen.
               </p>
               <div style={{ borderTop: '1px solid var(--color-bg-secondary)', paddingTop: '20px', marginBottom: '24px' }}>
                 <h4 style={{ fontSize: '1rem', marginBottom: '12px', fontWeight: 600 }}>Mein Angebot für dich:</h4>
@@ -288,7 +298,7 @@ function App() {
                   </li>
                   <li className="pricing-feature-item">
                     <Check size={18} color="var(--color-primary)" />
-                    <span><strong>Kosten:</strong> 120 € (einzeln oder als Paar)</span>
+                    <span><strong>Kosten:</strong> €</span>
                   </li>
                   <li className="pricing-feature-item">
                     <Check size={18} color="var(--color-primary)" />
@@ -310,12 +320,11 @@ function App() {
               <div className="pricing-card-header">
                 <h3>Folgegespräche</h3>
                 <div className="price-display">
-                  <span className="price-amount">110</span>
-                  <span className="price-currency">€</span>
+                  <span className="price-amount">€</span>
                 </div>
               </div>
               <p className="pricing-description" style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '24px' }}>
-                Du merkst nach dem Erstgespräch, dass du dir eine weiterführende, intensive Wegbegleitung wünschst? Nachdem wir im Erstgespräch die Basis gelegt haben, gehen wir in einem oder mehreren Folgegesprächen Schritt für Schritt weiter. Wir nehmen uns den Raum für deine aktuellen Fragen, sortieren die nächsten medizinischen oder emotionalen Schritte und fangen aufkommende Sorgen und Ängste direkt auf. Dabei knüpfen wir genau dort an, wo du gerade stehst und dir Begleitung wünschst.
+                Du merkst nach dem Erstgespräch, dass du dir eine <strong>weiterführende, intensive Wegbegleitung</strong> wünschst? Nachdem wir im Erstgespräch die Basis gelegt haben, gehen wir in einem oder mehreren Folgegesprächen Schritt für Schritt weiter. Wir nehmen uns den Raum für deine <strong>aktuellen Fragen</strong>, sortieren die nächsten <strong>medizinischen</strong> oder <strong>emotionalen Schritte</strong> und fangen aufkommende <strong>Sorgen</strong> und <strong>Ängste</strong> direkt auf. Dabei knüpfen wir genau dort an, wo du gerade stehst und dir Begleitung wünschst.
               </p>
               <div style={{ borderTop: '1px solid var(--color-bg-secondary)', paddingTop: '20px', marginBottom: '24px' }}>
                 <h4 style={{ fontSize: '1rem', marginBottom: '12px', fontWeight: 600 }}>Mein Angebot für dich:</h4>
@@ -326,7 +335,7 @@ function App() {
                   </li>
                   <li className="pricing-feature-item">
                     <Check size={18} color="var(--color-primary)" />
-                    <span><strong>Kosten:</strong> 110 € (einzeln oder als Paar)</span>
+                    <span><strong>Kosten:</strong> €</span>
                   </li>
                   <li className="pricing-feature-item">
                     <Check size={18} color="var(--color-primary)" />

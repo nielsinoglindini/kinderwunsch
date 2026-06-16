@@ -21,14 +21,14 @@ const SERVICES: Service[] = [
     id: 'initial',
     title: 'Erstgespräch',
     duration: '60 Minuten',
-    price: '120 €',
+    price: '€',
     description: 'Brennende Fragen & Sorgen sortieren, Klarheit & Erleichterung finden'
   },
   {
     id: 'followup',
     title: 'Folgegespräche',
     duration: '60 Minuten',
-    price: '110 €',
+    price: '€',
     description: 'Fortlaufende, tiefgehende Wegbegleitung Schritt für Schritt'
   }
 ];
@@ -176,9 +176,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, ini
                       <div className="service-option-title">{service.title}</div>
                       <div className="service-option-desc">{service.description}</div>
                     </div>
-                    <div className="service-option-price">
+                    <div className="service-option-price" style={{ fontSize: service.price === '€' ? '1.5rem' : undefined }}>
                       {service.price}
-                      <span>/{service.id === 'package' ? 'Paket' : 'Sitz.'}</span>
+                      {service.price !== '€' && <span>/{service.id === 'package' ? 'Paket' : 'Sitz.'}</span>}
                     </div>
                   </button>
                 ))}
