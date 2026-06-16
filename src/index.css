@@ -210,7 +210,7 @@ a {
 }
 
 .hero-subtitle {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: 1.35rem;
   font-weight: 400;
   color: var(--color-primary);
@@ -264,6 +264,25 @@ a {
   grid-template-columns: 1fr 1.2fr;
   gap: 64px;
   align-items: center;
+}
+
+.about-image-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 1;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.about-image-wrapper:hover .about-image {
+  transform: scale(1.03);
 }
 
 .about-text p {

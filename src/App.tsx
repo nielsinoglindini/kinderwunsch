@@ -88,8 +88,19 @@ function App() {
       {/* About Section */}
       <section id="about" className="section section-light">
         <div className="container about-grid">
+          {/* Left: Foto (Spiegelbild/Portrait) */}
           <div className="animate-on-scroll">
-            {/* Visual element or secondary image placeholder */}
+            <div className="about-image-wrapper">
+              <img 
+                src="about_kathrin.png" 
+                alt="Kathrin - Ihre Kinderwunschbegleiterin" 
+                className="about-image"
+              />
+            </div>
+          </div>
+
+          {/* Right: Text */}
+          <div className="animate-on-scroll" style={{ paddingLeft: '24px' }}>
             <h2 className="section-title">Wer dich auf deinem Weg begleitet</h2>
             <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-primary)', marginBottom: '32px' }}></div>
             <div className="about-text">
@@ -97,41 +108,9 @@ function App() {
                 Der Weg zum Wunschkind ist oft kein gerader Strich auf einem Test. Manchmal ist er ein jahrelanger, kräftezehrender Marathon. Ich kenne diesen Weg nicht nur aus Lehrbüchern, von Freunden oder Kollegen – ich bin ihn selbst acht Jahre lang gegangen. Aus tiefster eigener Erfahrung weiß ich, wie sich das Bangen, die Trauer und die schmerzhaften Rückschläge anfühlen. Etwas, das vermeintlich so einfach scheint - schwanger zu werden - wird zu einer scheinbar unlösbaren und unkontrollierbaren Situation. Ich selbst habe mich damals so ohnmächtig gefühlt und hätte all’ meine Fragen, Gedanken & Ängste gerne mit jemandem geteilt, der einen ganzheitlichen Blick auf das Thema Kinderwunsch wirft und mich empathisch und professionell begleitet.
               </p>
               <p>
-                Genau deshalb habe ich es mir zur Lebensaufgabe gemacht, Frauen und Paare auf diesem sensiblen Weg zu begleiten und einen Raum für dich zu schaffen, in dem deine Seele endlich wieder zur Ruhe kommen darf. Alle Gefühle haben im Gespräch ihren berechtigten Platz: Trauer – aber auch die leise, unerschütterliche Hoffnung. Und genau in dieser Hoffnung liegt deine Kraft: Gemeinsam gehen wir Schritt für Schritt vorwärts, im tiefen Vertrauen darauf, dass dein Weg ein gutes Ziel finden wird.
+                Genau deshalb habe ich es mir zur Lebensaufgabe gemacht, Frauen und Paare auf diesem sensiblen Weg zu begleiten und einen Raum für dich zu schaffen, in dem deine Seele endlich wieder zur Ruhe kommen darf. Alle Gefühle haben im Gespräch ihren berechtigten Platz: Wut, Verzweiflung, Trauer – aber auch die leise, unerschütterliche Hoffnung. Und genau in dieser Hoffnung liegt deine Kraft: Gemeinsam gehen wir Schritt für Schritt vorwärts, im tiefen Vertrauen darauf, dass dein Weg ein gutes Ziel finden wird.
               </p>
             </div>
-          </div>
-          <div className="animate-on-scroll" style={{ paddingLeft: '24px' }}>
-             <p className="mb-4" style={{ fontSize: '1.2rem', fontFamily: 'var(--font-heading)' }}>Meine Philosophie:</p>
-             <ul style={{ listStyle: 'none', paddingLeft: 0, display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                <li style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                  <div style={{ backgroundColor: 'var(--color-bg-secondary)', padding: '12px', borderRadius: '50%' }}>
-                    <Heart size={24} color="var(--color-primary)" />
-                  </div>
-                  <div>
-                    <h4 style={{ marginBottom: '4px', fontSize: '1.1rem' }}>Empathisch</h4>
-                    <span style={{ color: 'var(--color-text-muted)' }}>Jede Geschichte bekommt den Raum, den sie braucht. Nichts wird tabuisiert.</span>
-                  </div>
-                </li>
-                <li style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                  <div style={{ backgroundColor: 'var(--color-bg-secondary)', padding: '12px', borderRadius: '50%' }}>
-                    <Activity size={24} color="var(--color-primary)" />
-                  </div>
-                  <div>
-                    <h4 style={{ marginBottom: '4px', fontSize: '1.1rem' }}>Fundiert</h4>
-                    <span style={{ color: 'var(--color-text-muted)' }}>Klarheit in medizinischen Begriffen. Ich übersetze Fachchinesisch in für Sie greifbare Informationen.</span>
-                  </div>
-                </li>
-                <li style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                  <div style={{ backgroundColor: 'var(--color-bg-secondary)', padding: '12px', borderRadius: '50%' }}>
-                    <Leaf size={24} color="var(--color-primary)" />
-                  </div>
-                  <div>
-                    <h4 style={{ marginBottom: '4px', fontSize: '1.1rem' }}>Ganzheitlich</h4>
-                    <span style={{ color: 'var(--color-text-muted)' }}>Körper und Geist schwingen zusammen. Wir kümmern uns um Ihr inneres Gleichgewicht.</span>
-                  </div>
-                </li>
-             </ul>
           </div>
         </div>
       </section>
