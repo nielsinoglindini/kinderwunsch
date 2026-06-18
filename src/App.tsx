@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Calendar, ArrowRight, Menu, Check } from 'lucide-react';
+import { Heart, Activity, Leaf, Calendar, ArrowRight, Menu, Check, Stethoscope, Star, Compass } from 'lucide-react';
 import { BookingModal } from './components/BookingModal';
 import './index.css';
 
@@ -56,44 +56,37 @@ function App() {
 
       {/* Hero Section */}
       <header className="hero">
-        <div className="container">
-          <div className="hero-content">
-            <div className="hero-text animate-on-scroll" style={{ textAlign: 'left' }}>
-              <span className="section-eyebrow">Kinderwunschberatung</span>
-              <h1>Du musst diesen Weg nicht <em>alleine</em> gehen.</h1>
-              <p style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)', marginBottom: '36px', marginTop: '16px', lineHeight: '1.7' }}>
-                Einfühlsame, professionelle Begleitung auf deiner ganz persönlichen Reise zum Wunschkind – mit Herz, Wissen und echter Erfahrung.
-              </p>
-              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                <button onClick={() => handleOpenBooking('initial')} className="btn btn-primary" style={{ cursor: 'pointer', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.08em', padding: '12px 24px' }}>
-                  Kostenloses Erstgespräch
-                </button>
-                <a href="#services" className="btn btn-outline" style={{ textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.08em', padding: '12px 24px' }}>
-                  Mehr erfahren
-                </a>
-              </div>
-            </div>
-            <div className="hero-image-wrapper animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
-              <img 
-                src="hero.jpg" 
-                alt="Kathrin - Ihre Kinderwunschbegleiterin" 
-                className="hero-image"
-              />
-              <div className="floating-circle-badge">
-                <span className="emoji">🌸</span>
-                <span className="text">Zertifizierte<br />Beraterin</span>
-              </div>
+        <div className="container hero-content">
+          <div className="hero-text animate-on-scroll">
+            <h1>Du musst diesen Weg nicht alleine gehen.</h1>
+            <p className="hero-subtitle">
+              Deine ganzheitliche Begleitung im Kinderwunsch
+            </p>
+            <p>
+              Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer begleite ich dich auf deinem Weg zum Wunschkind – mit Empathie, Erfahrung und Herz bin ich an deiner Seite.
+            </p>
+            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <button onClick={() => handleOpenBooking('initial')} className="btn btn-primary" style={{ cursor: 'pointer' }}>
+                Erstgespräch buchen
+              </button>
+              <a href="#services" className="btn btn-outline">
+                Mehr erfahren
+              </a>
             </div>
           </div>
-          <div className="hero-scroll-indicator animate-on-scroll" style={{ transitionDelay: '0.4s' }}>
-            <span>Entdecken</span>
-            <div className="hero-scroll-line"></div>
+          <div className="hero-image-wrapper animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
+            <div className="hero-blob"></div>
+            <img 
+              src="hero.jpg" 
+              alt="Kathrin - Ihre Kinderwunschbegleiterin" 
+              className="hero-image"
+            />
           </div>
         </div>
       </header>
 
       {/* About Section */}
-      <section id="about" className="section section-light" style={{ overflow: 'visible' }}>
+      <section id="about" className="section section-light">
         <div className="container about-grid">
           {/* Left: Foto (Spiegelbild/Portrait) */}
           <div className="animate-on-scroll">
@@ -103,52 +96,20 @@ function App() {
                 alt="Kathrin - Ihre Kinderwunschbegleiterin" 
                 className="about-image"
               />
-              <div className="floating-badge-card top-right">
-                <h4>8+</h4>
-                <p>Jahre Erfahrung</p>
-              </div>
-              <div className="floating-badge-card bottom-left">
-                <h4>300+</h4>
-                <p>Familien begleitet</p>
-              </div>
             </div>
           </div>
 
           {/* Right: Text */}
           <div className="animate-on-scroll" style={{ paddingLeft: '24px' }}>
-            <span className="section-eyebrow" style={{ textAlign: 'left' }}>Über mich</span>
-            <h2 className="section-title" style={{ textAlign: 'left', fontSize: '2.5rem', marginBottom: '24px', lineHeight: '1.2' }}>
-              Mit Empathie & <em>echter Erfahrung</em> an deiner Seite
-            </h2>
+            <h2 className="section-title">Wer dich auf deinem Weg begleitet</h2>
+            <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-primary)', marginBottom: '32px' }}></div>
             <div className="about-text">
-              <p style={{ fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '20px' }}>
-                Ich kenne diesen Weg. Nicht nur aus Büchern oder Seminaren – sondern aus meinem eigenen Herzen. Die Frage, ob ein Wunschkind kommen wird, hat auch mein Leben geprägt. Aus dieser tiefen persönlichen Erfahrung heraus habe ich mich zur Kinderwunschberaterin ausbilden lassen.
+              <p>
+                Der Weg zum Wunschkind ist oft kein gerader Strich auf einem Test. Manchmal ist er ein jahrelanger, kräftezehrender Marathon. Ich kenne diesen Weg nicht nur aus Lehrbüchern, von Freunden oder Kollegen – ich bin ihn selbst acht Jahre lang gegangen. Aus tiefster eigener Erfahrung weiß ich, wie sich das Bangen, die Trauer und die schmerzhaften Rückschläge anfühlen. Etwas, das vermeintlich so einfach scheint - schwanger zu werden - wird zu einer scheinbar unlösbaren und unkontrollierbaren Situation. Ich selbst habe mich damals so ohnmächtig gefühlt und hätte all’ meine Fragen, Gedanken & Ängste gerne mit jemandem geteilt, der einen ganzheitlichen Blick auf das Thema Kinderwunsch wirft und mich empathisch und professionell begleitet.
               </p>
-              <blockquote className="blockquote-custom">
-                „Jeder Mensch verdient das Gefühl, gehört und verstanden zu werden – besonders in dieser sensiblen Zeit.“
-              </blockquote>
-              <p style={{ fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '24px' }}>
-                Heute begleite ich Frauen und Paare ganzheitlich: medizinisch fundiert, emotional unterstützend und immer auf Augenhöhe.
+              <p>
+                Genau deshalb habe ich es mir zur Lebensaufgabe gemacht, Frauen und Paare auf diesem sensiblen Weg zu begleiten und einen Raum für dich zu schaffen, in dem deine Seele endlich wieder zur Ruhe kommen darf. Alle Gefühle haben im Gespräch ihren berechtigten Platz: Wut, Verzweiflung, Trauer – aber auch die leise, unerschütterliche Hoffnung. Und genau in dieser Hoffnung liegt deine Kraft: Gemeinsam gehen wir Schritt für Schritt vorwärts, im tiefen Vertrauen darauf, dass dein Weg ein gutes Ziel finden wird.
               </p>
-              
-              <div className="about-pills-container">
-                <div className="about-pill">
-                  <span className="icon">🎓</span>
-                  <span>Zertifizierte Beraterin</span>
-                </div>
-                <div className="about-pill">
-                  <span className="icon">💛</span>
-                  <span>Eigene Erfahrung</span>
-                </div>
-                <div className="about-pill">
-                  <span className="icon">🌿</span>
-                  <span>Ganzheitlicher Ansatz</span>
-                </div>
-                <div className="about-pill">
-                  <span className="icon">💬</span>
-                  <span>Online & vor Ort</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -158,72 +119,78 @@ function App() {
       <section id="services" className="section">
         <div className="container">
           <div className="text-center animate-on-scroll">
-            <h2 className="section-title">Was ich für dich tun kann</h2>
-            <p className="section-subtitle" style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)', maxWidth: '650px', margin: '0 auto 48px', lineHeight: '1.6' }}>
-              Ob du gerade erst anfängst oder schon einen langen Weg hinter dir hast – ich begleite dich dort, wo du gerade stehst.
+            <h2 className="section-title">Wie ich dich unterstützen kann</h2>
+            <p className="section-subtitle">
+              Ich begleite dich sicher, einfühlsam und absolut urteilsfrei durch deine individuelle Situation:
             </p>
           </div>
           
-          <div className="services-grid-new">
-            <div className="service-card-new animate-on-scroll">
-              <div className="service-emoji-badge" style={{ backgroundColor: '#FCE7EC' }}>
-                <span>🌸</span>
+          <div className="services-grid">
+            <div className="service-card animate-on-scroll">
+              <div className="service-icon">
+                <Stethoscope size={28} />
               </div>
-              <h3>Erstberatung & Orientierung</h3>
+              <h3>Kinderwunschbehandlung</h3>
               <p>
-                Ein einfühlsames Gespräch zum Kennenlernen. Wir schauen gemeinsam, wo du stehst, was du brauchst – und welcher Weg für dich der richtige ist. Kostenlos und unverbindlich.
+                Vorbereitung und Begleitung deiner IUI, IVF oder ICSI.
               </p>
             </div>
             
-            <div className="service-card-new animate-on-scroll" style={{ transitionDelay: '0.05s' }}>
-              <div className="service-emoji-badge" style={{ backgroundColor: '#FFF2D1' }}>
-                <span>🤝</span>
+            <div className="service-card animate-on-scroll" style={{ transitionDelay: '0.05s' }}>
+              <div className="service-icon">
+                <Heart size={28} />
               </div>
-              <h3>Persönliche Begleitung</h3>
+              <h3>Gefühlschaos & Sorgen</h3>
               <p>
-                Langfristige, individuelle Unterstützung auf deiner Kinderwunschreise. Regelmäßige Gespräche, emotionale Stabilisierung und praktische Hilfe bei medizinischen Entscheidungen.
+                Umgang mit Ängsten vor, während und nach der Schwangerschaft.
               </p>
             </div>
             
-            <div className="service-card-new animate-on-scroll" style={{ transitionDelay: '0.1s' }}>
-              <div className="service-emoji-badge" style={{ backgroundColor: '#F1F3F5' }}>
-                <span>💻</span>
+            <div className="service-card animate-on-scroll" style={{ transitionDelay: '0.1s' }}>
+              <div className="service-icon">
+                <Star size={28} />
               </div>
-              <h3>Online-Beratung</h3>
+              <h3>Sternenkind-Begleitung</h3>
               <p>
-                Flexible Videoberatung von zu Hause aus – für alle, die keinen weiten Weg auf sich nehmen können oder möchten. Dieselbe Wärme, dieselbe Qualität.
+                Halt und Verarbeitung bei Verlust deines Wunders.
               </p>
             </div>
 
-            <div className="service-card-new animate-on-scroll" style={{ transitionDelay: '0.15s' }}>
-              <div className="service-emoji-badge" style={{ backgroundColor: '#FDF3EE' }}>
-                <span>👫</span>
+            <div className="service-card animate-on-scroll" style={{ transitionDelay: '0.15s' }}>
+              <div className="service-icon">
+                <Compass size={28} />
               </div>
-              <h3>Paarberatung</h3>
+              <h3>Abschied & Neuorientierung</h3>
               <p>
-                Der Kinderwunsch betrifft immer zwei. In gemeinsamen Gesprächen helfe ich euch, als Paar stark zu bleiben, füreinander da zu sein und den Weg gemeinsam zu gestalten.
+                Loslassen des Kinderwunsches und das Erarbeiten eines möglichen „Plan B“ (z. B. Adoption, Pflegschaft).
               </p>
             </div>
 
-            <div className="service-card-new animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
-              <div className="service-emoji-badge" style={{ backgroundColor: '#FFF9E6' }}>
-                <span>🌙</span>
+            <div className="service-card animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
+              <div className="service-icon">
+                <Activity size={28} />
               </div>
-              <h3>Trauer & Verlust</h3>
+              <h3>Körper & Diagnose</h3>
               <p>
-                Fehlgeburten, gescheiterte Behandlungen – dieser Schmerz ist real. Ich biete einen sicheren Raum, um zu trauern, zu verarbeiten und wieder Kraft zu schöpfen.
+                Leben und Kraft finden mit Endometriose bei Kinderwunsch.
               </p>
             </div>
 
-            <div className="service-card-new animate-on-scroll" style={{ transitionDelay: '0.25s' }}>
-              <div className="service-emoji-badge" style={{ backgroundColor: '#FFF3E6' }}>
-                <span>✨</span>
+            <div className="service-card animate-on-scroll" style={{ transitionDelay: '0.25s' }}>
+              <div className="service-icon">
+                <Leaf size={28} />
               </div>
-              <h3>Workshops & Gruppen</h3>
+              <h3>Alternative Wege</h3>
               <p>
-                In kleinen Gruppen begegnen sich Frauen mit ähnlichen Erfahrungen. Austausch, Übungen und das Wissen: Du bist nicht allein. Online und in Hamburg.
+                Beratung und Begleitung bei Samen- oder Eizellspende (Gametenspende).
               </p>
             </div>
+          </div>
+
+          <div className="text-center animate-on-scroll" style={{ marginTop: '48px' }}>
+            <p style={{ fontSize: '1.125rem', color: 'var(--color-text-muted)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
+              Ganz egal, an welchem Punkt du gerade stehst: Wir schauen gemeinsam, was du jetzt brauchst, um wieder in deine Kraft zu finden.
+            </p>
           </div>
         </div>
       </section>
@@ -233,11 +200,9 @@ function App() {
         <div className="container strengthen-grid">
           {/* Left: Text Content */}
           <div className="animate-on-scroll" style={{ textAlign: 'left' }}>
-            <span className="section-eyebrow">Philosophie</span>
-            <h2 className="section-title" style={{ textAlign: 'left', fontSize: '2.5rem', marginBottom: '24px', lineHeight: '1.2' }}>
-              Warum ich dich auf deinem Weg <em>stärken</em> kann
-            </h2>
-            <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--color-text-muted)', marginBottom: '32px' }}>
+            <h2 className="section-title">Warum ich dich auf deinem Weg stärken kann</h2>
+            <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-primary)', marginBottom: '32px' }}></div>
+            <p style={{ fontSize: '1.15rem', lineHeight: '1.8', color: 'var(--color-text-main)', marginBottom: '32px' }}>
               Ich bin Kathrin, ausgebildete ganzheitliche Kinderwunschberaterin, Business Coach und habe 10 Jahre Erfahrung in der Persönlichkeitsentwicklung von jungen Erwachsenen. Mit dieser Verbindung aus tiefem Mitgefühl und professioneller Struktur begleite ich dich dabei, um dir in einer emotionalen Zeit die Stabilität und das Vertrauen zurückzugeben, das du gerade brauchst. Aus eigener Erfahrung weiß ich, wie viel Kraft in dir steckt – lass’ sie uns gemeinsam wieder sichtbar machen!
             </p>
             
@@ -306,9 +271,8 @@ function App() {
       <section id="pricing" className="section">
         <div className="container">
           <div className="text-center animate-on-scroll">
-            <span className="section-eyebrow">Investition in dich</span>
-            <h2 className="section-title">Was du erwarten kannst und dafür <em>investierst</em></h2>
-            <p className="section-subtitle" style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)', maxWidth: '650px', margin: '0 auto 48px', lineHeight: '1.6' }}>
+            <h2 className="section-title">Was du erwarten kannst und dafür investierst</h2>
+            <p className="section-subtitle">
               Transparente Preisgestaltung für eine verlässliche und liebevolle Unterstützung auf deinem individuellen Weg.
             </p>
           </div>
@@ -345,7 +309,7 @@ function App() {
               <button 
                 onClick={() => handleOpenBooking('initial')} 
                 className="btn btn-outline" 
-                style={{ width: '100%', marginTop: 'auto', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.08em', padding: '12px 24px' }}
+                style={{ width: '100%', marginTop: 'auto' }}
               >
                 Erstgespräch buchen
               </button>
@@ -382,7 +346,7 @@ function App() {
               <button 
                 onClick={() => handleOpenBooking('followup')} 
                 className="btn btn-outline" 
-                style={{ width: '100%', marginTop: 'auto', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.08em', padding: '12px 24px' }}
+                style={{ width: '100%', marginTop: 'auto' }}
               >
                 Folgegespräch buchen
               </button>
@@ -395,10 +359,9 @@ function App() {
       <section id="blog" className="section section-secondary">
         <div className="container">
           <div className="text-center animate-on-scroll">
-            <span className="section-eyebrow">Ratgeber & Wissen</span>
-            <h2 className="section-title">Impulse, Wissen & <em>Mutmacher</em></h2>
-            <p className="section-subtitle" style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)', maxWidth: '650px', margin: '0 auto 48px', lineHeight: '1.6' }}>
-              Hilfreiche Artikel und einfühlsame Gedanken, um dir Klarheit und Mut auf deinem Weg zu schenken.
+            <h2 className="section-title">Wissen & Ratgeber</h2>
+            <p className="section-subtitle">
+              Impulse und Informationen, um Ihnen Klarheit und Mut für die nächsten Schritte zu geben.
             </p>
           </div>
           
@@ -408,7 +371,7 @@ function App() {
                 <span style={{ fontWeight: 500 }}>Aufklärung</span>
                 <h4>Wusstest du, dass fast jede 4. Schwangerschaft in einer Fehlgeburt endet?</h4>
                 <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', marginTop: '8px' }}>
-                  Du bist damit nicht allein. Warum dieses Thema kein Tabu sein darf und wie Validierung der Trauer hilft.
+                  Sie sind damit nicht allein. Warum dieses Thema kein Tabu sein darf und wie Validierung der Trauer hilft.
                 </p>
               </div>
               <ArrowRight color="var(--color-primary)" />
@@ -419,7 +382,7 @@ function App() {
                 <span style={{ fontWeight: 500 }}>Klinik Guide</span>
                 <h4>Was passiert beim ersten Termin in der Klinik?</h4>
                 <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', marginTop: '8px' }}>
-                  Die 5 wichtigsten Fragen für dein Erstgespräch in der Kinderwunschklinik als Checkliste.
+                  Die 5 wichtigsten Fragen für Ihr Erstgespräch in der Kinderwunschklinik als Checkliste.
                 </p>
               </div>
               <ArrowRight color="var(--color-primary)" />
@@ -438,7 +401,7 @@ function App() {
           </div>
           
           <div className="text-center" style={{ marginTop: '48px' }}>
-            <a href="#blog" className="btn btn-outline" style={{ textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.08em', padding: '12px 24px' }}>Alle Artikel lesen</a>
+            <a href="#blog" className="btn btn-outline" style={{ fontSize: '0.95rem' }}>Alle Artikel lesen</a>
           </div>
         </div>
       </section>
@@ -454,17 +417,16 @@ function App() {
             borderRadius: 'var(--radius-lg)',
             boxShadow: 'var(--shadow-md)'
           }}>
-            <Calendar size={40} color="var(--color-primary)" style={{ margin: '0 auto 20px' }} />
-            <span className="section-eyebrow">Kontakt & Termin</span>
-            <h2 className="section-title" style={{ fontSize: '2.2rem', marginBottom: '16px' }}>Lass uns ins <em>Gespräch</em> kommen</h2>
-            <p className="mb-8" style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)', lineHeight: '1.6', maxWidth: '600px', margin: '0 auto 32px' }}>
-              Der erste Schritt ist oft der schwerste. Buche hier ganz einfach deinen Wunschtermin für ein Erstgespräch oder eine Folgesitzung (online via Zoom).
+            <Calendar size={48} color="var(--color-primary)" style={{ margin: '0 auto 24px' }} />
+            <h2 className="section-title">Lassen Sie uns ins Gespräch kommen</h2>
+            <p className="mb-8" style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)' }}>
+              Der erste Schritt ist oft der schwerste. Buchen Sie hier ganz einfach Ihren Wunschtermin für ein Erstgespräch oder Folgesitzungen (per Telefon oder Zoom).
             </p>
-            <button onClick={() => handleOpenBooking()} className="btn btn-primary" style={{ padding: '14px 32px', fontSize: '0.85rem', cursor: 'pointer', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+            <button onClick={() => handleOpenBooking()} className="btn btn-primary" style={{ padding: '16px 36px', fontSize: '1.1rem', cursor: 'pointer' }}>
               Termin online buchen
             </button>
             <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginTop: '24px' }}>
-              Deine Daten werden vertraulich behandelt (DSGVO konform).
+              Ihre Daten werden vertraulich behandelt (Standort DE/DSGVO konform).
             </p>
           </div>
         </div>
@@ -477,7 +439,7 @@ function App() {
             <div className="footer-col">
               <h4>Kathrin Kinderwunsch</h4>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', marginBottom: '16px', lineHeight: 1.6 }}>
-                Einfühlsame und professionelle Begleitung auf deinem Weg zum Wunschkind und bei Verlusten.
+                Einfühlsame und professionelle Begleitung auf Ihrem Weg zum Wunschkind und bei Verlusten.
               </p>
             </div>
             <div className="footer-col">

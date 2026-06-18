@@ -151,7 +151,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, ini
             </p>
           )}
           {step < 5 && !activeService && (
-            <p className="booking-modal-subtitle">Bitte wähle das gewünschte Angebot aus</p>
+            <p className="booking-modal-subtitle">Bitte wählen Sie das gewünschte Angebot aus</p>
           )}
         </div>
 
@@ -279,11 +279,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, ini
               <form onSubmit={handleSubmit} className="booking-form">
                 <div className="form-group">
                   <label htmlFor="name">Name</label>
-                  <input type="text" id="name" name="name" required value={formData.name} onChange={handleInputChange} placeholder="Dein Name" />
+                  <input type="text" id="name" name="name" required value={formData.name} onChange={handleInputChange} placeholder="Ihr Name" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="email">E-Mail</label>
-                  <input type="email" id="email" name="email" required value={formData.email} onChange={handleInputChange} placeholder="Deine E-Mail-Adresse" />
+                  <input type="email" id="email" name="email" required value={formData.email} onChange={handleInputChange} placeholder="Ihre E-Mail-Adresse" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="phone">Telefon (optional)</label>
@@ -306,9 +306,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, ini
               <div className="success-icon-wrapper">
                 <CheckCircle size={48} color="var(--color-primary)" />
               </div>
-              <h3>Vielen Dank für deine Anfrage!</h3>
-              <p>Dein Termin für das <strong>{activeService?.title}</strong> am <strong>{selectedDate?.toLocaleDateString('de-DE', { day: 'numeric', month: 'long' })} um {selectedTime} Uhr</strong> wurde erfolgreich reserviert.</p>
-              <p className="success-subtext">Du erhältst in Kürze eine Bestätigung per E-Mail mit allen weiteren Informationen zum Zoom-Meeting sowie zur Bezahlung.</p>
+              <h3>Vielen Dank für Ihre Anfrage!</h3>
+              <p>Ihr Termin für das <strong>{activeService?.title}</strong> am <strong>{selectedDate?.toLocaleDateString('de-DE', { day: 'numeric', month: 'long' })} um {selectedTime} Uhr</strong> wurde erfolgreich reserviert.</p>
+              <p className="success-subtext">Sie erhalten in Kürze eine Bestätigung per E-Mail mit allen weiteren Informationen zum Zoom-Meeting sowie zur Bezahlung.</p>
               
               <button className="btn btn-outline" onClick={handleClose} style={{ marginTop: '24px', width: '100%' }}>
                 Schließen
