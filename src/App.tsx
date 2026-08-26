@@ -59,8 +59,9 @@ function App() {
         <div className="container hero-content">
           <div className="hero-text animate-on-scroll">
             <h1>Du musst diesen Weg nicht alleine gehen.</h1>
+            <br />
             <p className="hero-subtitle">
-              Deine ganzheitliche Begleitung im Kinderwunsch
+              Deine ganzheitliche Begleitung im Kinderwunsch.
             </p>
             <p>
               Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer begleite ich dich auf deinem Weg zum Wunschkind – mit Empathie, Erfahrung und Herz bin ich an deiner Seite.
@@ -189,7 +190,7 @@ function App() {
 
           <div className="text-center animate-on-scroll" style={{ marginTop: '48px' }}>
             <p style={{ fontSize: '1.125rem', color: 'var(--color-text-muted)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
-              Ganz egal, an welchem Punkt du gerade stehst: Wir schauen gemeinsam, was du jetzt brauchst, um wieder in deine Kraft zu finden.
+              Ganz egal, an welchem Punkt du gerade stehst: Wir schauen gemeinsam, was du <em>jetzt</em> brauchst, um wieder in deine Kraft zu finden.
             </p>
           </div>
         </div>
