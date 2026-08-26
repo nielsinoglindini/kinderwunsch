@@ -39,7 +39,7 @@ function App() {
       <nav className="navbar">
         <div className="container nav-container">
           <div className="nav-logo">
-            Kathrin <span>Kinderwunschbegleitung</span>
+            Kathrin <span>Scheu | Ganzheitliche Kinderwunschberaterin</span>
           </div>
           <div className="nav-links">
             <a href="#about" className="nav-link">Über mich</a>
