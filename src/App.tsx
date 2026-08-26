@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Heart, Activity, Leaf, Calendar, ArrowRight, Menu, Check, Stethoscope, Star, Compass } from 'lucide-react';
+import { Heart, Activity, Leaf, Calendar, Menu, Check, Stethoscope, Star, Compass } from 'lucide-react';
 import { BookingModal } from './components/BookingModal';
 import './index.css';
 
@@ -45,7 +45,6 @@ function App() {
             <a href="#about" className="nav-link">Über mich</a>
             <a href="#services" className="nav-link">Leistungen</a>
             <a href="#pricing" className="nav-link">Preise</a>
-            <a href="#blog" className="nav-link">Ratgeber</a>
             <button onClick={() => handleOpenBooking()} className="btn btn-outline" style={{ padding: '8px 20px', cursor: 'pointer' }}>Termin buchen</button>
           </div>
           <div className="mobile-menu" style={{ display: 'none' /* Handled by media queries normally */ }}>
@@ -77,9 +76,9 @@ function App() {
           </div>
           <div className="hero-image-wrapper animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
             <div className="hero-blob"></div>
-            <img 
-              src="hero.jpg" 
-              alt="Kathrin - Ihre Kinderwunschbegleiterin" 
+            <img
+              src="hero.jpg"
+              alt="Kathrin - Ihre Kinderwunschbegleiterin"
               className="hero-image"
             />
           </div>
@@ -92,9 +91,9 @@ function App() {
           {/* Left: Foto (Spiegelbild/Portrait) */}
           <div className="animate-on-scroll">
             <div className="about-image-wrapper">
-              <img 
-                src="about_kathrin.png" 
-                alt="Kathrin - Ihre Kinderwunschbegleiterin" 
+              <img
+                src="about_kathrin.png"
+                alt="Kathrin - Ihre Kinderwunschbegleiterin"
                 className="about-image"
               />
             </div>
@@ -125,7 +124,7 @@ function App() {
               Ich begleite dich sicher, einfühlsam und absolut urteilsfrei durch deine individuelle Situation:
             </p>
           </div>
-          
+
           <div className="services-grid">
             <div className="service-card animate-on-scroll">
               <div className="service-icon">
@@ -136,7 +135,7 @@ function App() {
                 Vorbereitung und Begleitung deiner IUI, IVF oder ICSI.
               </p>
             </div>
-            
+
             <div className="service-card animate-on-scroll" style={{ transitionDelay: '0.05s' }}>
               <div className="service-icon">
                 <Heart size={28} />
@@ -146,7 +145,7 @@ function App() {
                 Umgang mit Ängsten vor, während und nach der Schwangerschaft.
               </p>
             </div>
-            
+
             <div className="service-card animate-on-scroll" style={{ transitionDelay: '0.1s' }}>
               <div className="service-icon">
                 <Star size={28} />
@@ -206,7 +205,7 @@ function App() {
             <p style={{ fontSize: '1.15rem', lineHeight: '1.8', color: 'var(--color-text-main)', marginBottom: '32px' }}>
               Ich bin Kathrin, ausgebildete ganzheitliche Kinderwunschberaterin, Business Coach und habe 10 Jahre Erfahrung in der Persönlichkeitsentwicklung von jungen Erwachsenen. Mit dieser Verbindung aus tiefem Mitgefühl und professioneller Struktur begleite ich dich dabei, um dir in einer emotionalen Zeit die Stabilität und das Vertrauen zurückzugeben, das du gerade brauchst. Aus eigener Erfahrung weiß ich, wie viel Kraft in dir steckt – lass’ sie uns gemeinsam wieder sichtbar machen!
             </p>
-            
+
             {/* Certification Badge */}
             <div className="certification-badge" style={{
               display: 'inline-flex',
@@ -258,9 +257,9 @@ function App() {
           {/* Right: Bild/Grafik Platzhalter */}
           <div className="animate-on-scroll">
             <div className="strengthen-image-wrapper">
-              <img 
-                src="strengthen_graphic.jpg" 
-                alt="Wachstum und Unterstützung im Kinderwunsch" 
+              <img
+                src="strengthen_graphic.jpg"
+                alt="Wachstum und Unterstützung im Kinderwunsch"
                 className="strengthen-image"
               />
             </div>
@@ -304,9 +303,9 @@ function App() {
                   </li>
                 </ul>
               </div>
-              <button 
-                onClick={() => handleOpenBooking('initial')} 
-                className="btn btn-outline" 
+              <button
+                onClick={() => handleOpenBooking('initial')}
+                className="btn btn-outline"
                 style={{ width: '100%', marginTop: 'auto' }}
               >
                 Erstgespräch buchen
@@ -338,9 +337,9 @@ function App() {
                   </li>
                 </ul>
               </div>
-              <button 
-                onClick={() => handleOpenBooking('followup')} 
-                className="btn btn-outline" 
+              <button
+                onClick={() => handleOpenBooking('followup')}
+                className="btn btn-outline"
                 style={{ width: '100%', marginTop: 'auto' }}
               >
                 Folgegespräch buchen
@@ -350,65 +349,16 @@ function App() {
         </div>
       </section>
 
-      {/* Blog/Ratgeber Section (SEO Focus) */}
-      <section id="blog" className="section section-secondary">
-        <div className="container">
-          <div className="text-center animate-on-scroll">
-            <h2 className="section-title">Wissen & Ratgeber</h2>
-            <p className="section-subtitle">
-              Impulse und Informationen, um Ihnen Klarheit und Mut für die nächsten Schritte zu geben.
-            </p>
-          </div>
-          
-          <div className="blog-list">
-            <div className="blog-item animate-on-scroll">
-              <div>
-                <span style={{ fontWeight: 500 }}>Aufklärung</span>
-                <h4>Wusstest du, dass fast jede 4. Schwangerschaft in einer Fehlgeburt endet?</h4>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', marginTop: '8px' }}>
-                  Sie sind damit nicht allein. Warum dieses Thema kein Tabu sein darf und wie Validierung der Trauer hilft.
-                </p>
-              </div>
-              <ArrowRight color="var(--color-primary)" />
-            </div>
-            
-            <div className="blog-item animate-on-scroll" style={{ transitionDelay: '0.1s' }}>
-              <div>
-                <span style={{ fontWeight: 500 }}>Klinik Guide</span>
-                <h4>Was passiert beim ersten Termin in der Klinik?</h4>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', marginTop: '8px' }}>
-                  Die 5 wichtigsten Fragen für Ihr Erstgespräch in der Kinderwunschklinik als Checkliste.
-                </p>
-              </div>
-              <ArrowRight color="var(--color-primary)" />
-            </div>
-            
-            <div className="blog-item animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
-              <div>
-                <span style={{ fontWeight: 500 }}>Umfeld</span>
-                <h4>Dinge, die man einer Frau mit unerfülltem Kinderwunsch nicht sagen sollte.</h4>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', marginTop: '8px' }}>
-                  Wie Angehörige besser unterstützen können, ohne versehentlich zu verletzen.
-                </p>
-              </div>
-              <ArrowRight color="var(--color-primary)" />
-            </div>
-          </div>
-          
-          <div className="text-center" style={{ marginTop: '48px' }}>
-            <a href="#blog" className="btn btn-outline" style={{ fontSize: '0.95rem' }}>Alle Artikel lesen</a>
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA / Booking Section */}
       <section id="contact" className="section section-light">
         <div className="container">
-          <div className="text-center animate-on-scroll" style={{ 
-            maxWidth: '800px', 
-            margin: '0 auto', 
-            backgroundColor: 'var(--color-bg)', 
-            padding: '64px 40px', 
+          <div className="text-center animate-on-scroll" style={{
+            maxWidth: '800px',
+            margin: '0 auto',
+            backgroundColor: 'var(--color-bg)',
+            padding: '64px 40px',
             borderRadius: 'var(--radius-lg)',
             boxShadow: 'var(--shadow-md)'
           }}>
@@ -443,7 +393,6 @@ function App() {
                 <li><a href="#about">Über mich</a></li>
                 <li><a href="#services">Leistungen</a></li>
                 <li><a href="#pricing">Preise</a></li>
-                <li><a href="#blog">Ratgeber</a></li>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); handleOpenBooking(); }}>Termin buchen</a></li>
               </ul>
             </div>
@@ -462,13 +411,13 @@ function App() {
         </div>
       </footer>
 
-      <BookingModal 
-        isOpen={isBookingOpen} 
+      <BookingModal
+        isOpen={isBookingOpen}
         onClose={() => {
           setIsBookingOpen(false);
           setSelectedService(undefined);
-        }} 
-        initialService={selectedService} 
+        }}
+        initialService={selectedService}
       />
     </>
   );
