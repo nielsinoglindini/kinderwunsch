@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Heart, Activity, Leaf, Calendar, Menu, Check, Stethoscope, Star, Compass } from 'lucide-react';
 import { BookingModal } from './components/BookingModal';
+import { LegalModal } from './components/LegalModal';
 import './index.css';
 
 function App() {
@@ -16,6 +17,13 @@ function App() {
     privacyAccepted: false
   });
   const [contactSubmitted, setContactSubmitted] = useState(false);
+  const [isLegalOpen, setIsLegalOpen] = useState(false);
+  const [legalType, setLegalType] = useState<'impressum' | 'privacy'>('privacy');
+
+  const handleOpenLegal = (type: 'impressum' | 'privacy') => {
+    setLegalType(type);
+    setIsLegalOpen(true);
+  };
 
   const handleContactChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -482,7 +490,7 @@ function App() {
                       style={{ width: '18px', height: '18px', marginTop: '2px', cursor: 'pointer', accentColor: 'var(--color-primary)', flexShrink: 0 }}
                     />
                     <span>
-                      Ich habe die <a href="#datenschutz" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>Datenschutzerklärung</a> gelesen und stimme zu, dass meine Angaben zur Kontaktaufnahme gespeichert werden.
+                      Ich habe die <a href="#datenschutz" onClick={(e) => { e.preventDefault(); handleOpenLegal('privacy'); }} style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>Datenschutzerklärung</a> gelesen und stimme zu, dass meine Angaben zur Kontaktaufnahme gespeichert werden.
                     </span>
                   </label>
                 </div>
@@ -526,8 +534,8 @@ function App() {
               <h4>Kontakt</h4>
               <ul>
                 <li><a href="mailto:kontakt@kathrin-kinderwunsch.de">kontakt@kathrin-kinderwunsch.de</a></li>
-                <li><a href="#impressum">Impressum</a></li>
-                <li><a href="#datenschutz">Datenschutz</a></li>
+                <li><a href="#impressum" onClick={(e) => { e.preventDefault(); handleOpenLegal('impressum'); }}>Impressum</a></li>
+                <li><a href="#datenschutz" onClick={(e) => { e.preventDefault(); handleOpenLegal('privacy'); }}>Datenschutz</a></li>
               </ul>
             </div>
           </div>
@@ -544,6 +552,12 @@ function App() {
           setSelectedService(undefined);
         }}
         initialService={selectedService}
+      />
+
+      <LegalModal
+        isOpen={isLegalOpen}
+        onClose={() => setIsLegalOpen(false)}
+        type={legalType}
       />
     </>
   );
