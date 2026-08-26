@@ -283,9 +283,6 @@ function App() {
             <div className="pricing-card animate-on-scroll">
               <div className="pricing-card-header">
                 <h3>Erstgespräch</h3>
-                <div className="price-display">
-                  <span className="price-amount">€</span>
-                </div>
               </div>
               <p className="pricing-description" style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '24px' }}>
                 Der Kinderwunschweg kann emotional aufwühlend sein und <strong>brennende Fragen</strong> oder <strong>Sorgen</strong> hinterlassen, die dich gedanklich kaum zur Ruhe kommen lassen. In unserem Erstgespräch schenke ich dir einen geschützten, bewertungsfreien Raum, in dem alles, was dich aktuell belastet, laut ausgesprochen und sortiert werden darf. Gemeinsam ordnen wir das <strong>Chaos im Kopf</strong>, damit du schon nach dem ersten Gespräch mit spürbar mehr <strong>Klarheit</strong>, <strong>Erleichterung</strong> und einem sicheren Gefühl für deine nächsten Schritte nach Hause gehst. Lass uns den ersten Schritt gemeinsam machen.
@@ -299,7 +296,7 @@ function App() {
                   </li>
                   <li className="pricing-feature-item">
                     <Check size={18} color="var(--color-primary)" />
-                    <span><strong>Kosten:</strong> €</span>
+                    <span><strong>Kosten:</strong> 120 € (einzeln oder als Paar)</span>
                   </li>
                   <li className="pricing-feature-item">
                     <Check size={18} color="var(--color-primary)" />
@@ -320,9 +317,6 @@ function App() {
             <div className="pricing-card animate-on-scroll" style={{ transitionDelay: '0.1s' }}>
               <div className="pricing-card-header">
                 <h3>Folgegespräche</h3>
-                <div className="price-display">
-                  <span className="price-amount">€</span>
-                </div>
               </div>
               <p className="pricing-description" style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '24px' }}>
                 Du merkst nach dem Erstgespräch, dass du dir eine <strong>weiterführende, intensive Wegbegleitung</strong> wünschst? Nachdem wir im Erstgespräch die Basis gelegt haben, gehen wir in einem oder mehreren Folgegesprächen Schritt für Schritt weiter. Wir nehmen uns den Raum für deine <strong>aktuellen Fragen</strong>, sortieren die nächsten <strong>medizinischen</strong> oder <strong>emotionalen Schritte</strong> und fangen aufkommende <strong>Sorgen</strong> und <strong>Ängste</strong> direkt auf. Dabei knüpfen wir genau dort an, wo du gerade stehst und dir Begleitung wünschst.
@@ -336,7 +330,7 @@ function App() {
                   </li>
                   <li className="pricing-feature-item">
                     <Check size={18} color="var(--color-primary)" />
-                    <span><strong>Kosten:</strong> €</span>
+                    <span><strong>Kosten:</strong> 110 € (einzeln oder als Paar)</span>
                   </li>
                   <li className="pricing-feature-item">
                     <Check size={18} color="var(--color-primary)" />

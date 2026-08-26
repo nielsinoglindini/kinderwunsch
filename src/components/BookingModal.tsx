@@ -21,14 +21,14 @@ const SERVICES: Service[] = [
     id: 'initial',
     title: 'Erstgespräch',
     duration: '60 Minuten',
-    price: '€',
+    price: '120 €',
     description: 'Brennende Fragen & Sorgen sortieren, Klarheit & Erleichterung finden'
   },
   {
     id: 'followup',
     title: 'Folgegespräche',
     duration: '60 Minuten',
-    price: '€',
+    price: '110 €',
     description: 'Fortlaufende, tiefgehende Wegbegleitung Schritt für Schritt'
   }
 ];
