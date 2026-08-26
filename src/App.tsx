@@ -7,6 +7,34 @@ function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedService, setSelectedService] = useState<'initial' | 'followup' | 'package' | undefined>(undefined);
 
+  const [contactForm, setContactForm] = useState({
+    name: '',
+    email: '',
+    message: '',
+    inPresence: false,
+    onlineZoom: false,
+    privacyAccepted: false
+  });
+  const [contactSubmitted, setContactSubmitted] = useState(false);
+
+  const handleContactChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target;
+    if (type === 'checkbox') {
+      const target = e.target as HTMLInputElement;
+      setContactForm(prev => ({ ...prev, [name]: target.checked }));
+    } else {
+      setContactForm(prev => ({ ...prev, [name]: value }));
+    }
+  };
+
+  const handleContactSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simulate submission
+    setTimeout(() => {
+      setContactSubmitted(true);
+    }, 600);
+  };
+
   const handleOpenBooking = (service?: 'initial' | 'followup' | 'package') => {
     setSelectedService(service);
     setIsBookingOpen(true);
@@ -363,13 +391,111 @@ function App() {
             boxShadow: 'var(--shadow-md)'
           }}>
             <Calendar size={48} color="var(--color-primary)" style={{ margin: '0 auto 24px' }} />
-            <h2 className="section-title">Lassen Sie uns ins Gespräch kommen</h2>
-            <p className="mb-8" style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)' }}>
-              Der erste Schritt ist oft der schwerste. Buchen Sie hier ganz einfach Ihren Wunschtermin für ein Erstgespräch oder Folgesitzungen (per Telefon oder Zoom).
+            <h2 className="section-title">Lass‘ uns deinen ersten Schritt gehen.</h2>
+            <p className="mb-8" style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)', marginBottom: '32px' }}>
+              Ich freue mich darauf, dich kennenzulernen und dir zuzuhören.
             </p>
-            <button onClick={() => handleOpenBooking()} className="btn btn-primary" style={{ padding: '16px 36px', fontSize: '1.1rem', cursor: 'pointer' }}>
-              Termin online buchen
-            </button>
+
+            {contactSubmitted ? (
+              <div className="animate-fade-in" style={{ padding: '24px', backgroundColor: 'var(--color-bg-secondary)', borderRadius: 'var(--radius-md)' }}>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '12px', color: 'var(--color-text-main)' }}>Vielen Dank für deine Nachricht!</h3>
+                <p style={{ color: 'var(--color-text-muted)' }}>Ich habe deine Anfrage erhalten und werde mich in Kürze bei dir melden.</p>
+              </div>
+            ) : (
+              <form onSubmit={handleContactSubmit} style={{ textAlign: 'left', maxWidth: '600px', margin: '0 auto' }}>
+                <div className="form-group" style={{ marginBottom: '20px' }}>
+                  <label htmlFor="contact-name" style={{ display: 'block', marginBottom: '8px', fontWeight: 500 }}>Vor- und Nachname</label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    value={contactForm.name}
+                    onChange={handleContactChange}
+                    required
+                    style={{ width: '100%', padding: '12px 16px', border: '1px solid var(--color-accent)', borderRadius: 'var(--radius-md)', backgroundColor: 'var(--color-surface)', fontSize: '1rem' }}
+                  />
+                </div>
+
+                <div className="form-group" style={{ marginBottom: '20px' }}>
+                  <label htmlFor="contact-email" style={{ display: 'block', marginBottom: '8px', fontWeight: 500 }}>E-Mail-Adresse</label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    value={contactForm.email}
+                    onChange={handleContactChange}
+                    required
+                    style={{ width: '100%', padding: '12px 16px', border: '1px solid var(--color-accent)', borderRadius: 'var(--radius-md)', backgroundColor: 'var(--color-surface)', fontSize: '1rem' }}
+                  />
+                </div>
+
+                <div className="form-group" style={{ marginBottom: '24px' }}>
+                  <label htmlFor="contact-message" style={{ display: 'block', marginBottom: '8px', fontWeight: 500 }}>
+                    Deine Nachricht: Schreibe mir gern‘ ein paar Zeilen über dich und wo du gerade stehst.
+                  </label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows={6}
+                    value={contactForm.message}
+                    onChange={handleContactChange}
+                    required
+                    placeholder="Deine Nachricht (Freitextfeld - unbegrenzte Wortanzahl)"
+                    style={{ width: '100%', padding: '12px 16px', border: '1px solid var(--color-accent)', borderRadius: 'var(--radius-md)', backgroundColor: 'var(--color-surface)', fontSize: '1rem', resize: 'vertical', fontFamily: 'inherit' }}
+                  />
+                </div>
+
+                <div style={{ marginBottom: '24px' }}>
+                  <label style={{ display: 'block', fontWeight: 500, marginBottom: '12px' }}>Erstgespräch gewünscht</label>
+                  <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
+                    <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontWeight: 'normal' }}>
+                      <input
+                        type="checkbox"
+                        name="inPresence"
+                        checked={contactForm.inPresence}
+                        onChange={handleContactChange}
+                        style={{ width: '18px', height: '18px', cursor: 'pointer', accentColor: 'var(--color-primary)' }}
+                      />
+                      <span>in Präsenz</span>
+                    </label>
+                    <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontWeight: 'normal' }}>
+                      <input
+                        type="checkbox"
+                        name="onlineZoom"
+                        checked={contactForm.onlineZoom}
+                        onChange={handleContactChange}
+                        style={{ width: '18px', height: '18px', cursor: 'pointer', accentColor: 'var(--color-primary)' }}
+                      />
+                      <span>online via Zoom</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div style={{ marginBottom: '32px' }}>
+                  <label style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', cursor: 'pointer', fontWeight: 'normal', fontSize: '0.9rem', lineHeight: '1.5' }}>
+                    <input
+                      type="checkbox"
+                      name="privacyAccepted"
+                      checked={contactForm.privacyAccepted}
+                      onChange={handleContactChange}
+                      required
+                      style={{ width: '18px', height: '18px', marginTop: '2px', cursor: 'pointer', accentColor: 'var(--color-primary)', flexShrink: 0 }}
+                    />
+                    <span>
+                      Ich habe die <a href="#datenschutz" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>Datenschutzerklärung</a> gelesen und stimme zu, dass meine Angaben zur Kontaktaufnahme gespeichert werden.
+                    </span>
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  style={{ width: '100%', padding: '16px', fontSize: '1.1rem', cursor: 'pointer', display: 'block' }}
+                >
+                  Nachricht abschicken
+                </button>
+              </form>
+            )}
             <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginTop: '24px' }}>
               Ihre Daten werden vertraulich behandelt (Standort DE/DSGVO konform).
             </p>
