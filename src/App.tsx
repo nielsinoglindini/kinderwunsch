@@ -91,6 +91,8 @@ function App() {
 
       {/* Hero Section */}
       <header className="hero">
+        <div className="ambient-blob blob-1"></div>
+        <div className="ambient-blob blob-2"></div>
         <div className="container hero-content">
           <div className="hero-text animate-on-scroll">
             <h1>Du musst diesen Weg nicht alleine gehen.</h1>
@@ -406,7 +408,7 @@ function App() {
 
             {contactSubmitted ? (
               <div className="animate-fade-in" style={{ padding: '24px', backgroundColor: 'var(--color-bg-secondary)', borderRadius: 'var(--radius-md)' }}>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '12px', color: 'var(--color-text-main)' }}>Vielen Dank für deine Nachricht!</h3>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '12px', color: 'var(--color-text-heading)' }}>Vielen Dank für deine Nachricht!</h3>
                 <p style={{ color: 'var(--color-text-muted)' }}>Ich habe deine Anfrage erhalten und werde mich in Kürze bei dir melden.</p>
               </div>
             ) : (

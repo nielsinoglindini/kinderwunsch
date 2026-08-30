@@ -22,7 +22,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
         </button>
 
         <div className="booking-modal-header" style={{ padding: '32px 32px 16px', textAlign: 'left', borderBottom: '1px solid var(--color-bg-secondary)' }}>
-          <h2 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-heading)', color: 'var(--color-text-main)' }}>
+          <h2 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-heading)', color: 'var(--color-text-heading)' }}>
             {type === 'impressum' ? 'Impressum' : 'Datenschutzerklärung'}
           </h2>
         </div>
@@ -30,38 +30,38 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
         <div className="booking-modal-body" style={{ padding: '32px', overflowY: 'auto', maxHeight: '60vh', fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-text-main)', textAlign: 'left' }}>
           {type === 'impressum' ? (
             <div className="legal-content">
-              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600 }}>Angaben gemäß § 5 TMG</h3>
+              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-heading)', fontWeight: 600 }}>Angaben gemäß § 5 TMG</h3>
               <p style={{ marginBottom: '16px' }}>
                 Kathrin Scheu<br />
                 Ganzheitliche Kinderwunschberaterin<br />
                 Deutschland
               </p>
 
-              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '24px' }}>Kontakt</h3>
+              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-heading)', fontWeight: 600, marginTop: '24px' }}>Kontakt</h3>
               <p style={{ marginBottom: '16px' }}>
                 E-Mail: <a href="mailto:kontakt@kathrin-kinderwunsch.de" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>kontakt@kathrin-kinderwunsch.de</a>
               </p>
 
-              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '24px' }}>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
+              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-heading)', fontWeight: 600, marginTop: '24px' }}>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
               <p style={{ marginBottom: '16px' }}>
                 Berufsbezeichnung: Ganzheitliche Kinderwunschberaterin, Business Coach<br />
                 Verliehen in: Deutschland
               </p>
 
-              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '24px' }}>EU-Streitschlichtung</h3>
+              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-heading)', fontWeight: 600, marginTop: '24px' }}>EU-Streitschlichtung</h3>
               <p style={{ marginBottom: '16px' }}>
                 Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>https://ec.europa.eu/consumers/odr</a>.<br />
                 Unsere E-Mail-Adresse finden Sie oben im Impressum.
               </p>
 
-              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '24px' }}>Verbraucherstreitbeilegung/Universalschlichtungsstelle</h3>
+              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-heading)', fontWeight: 600, marginTop: '24px' }}>Verbraucherstreitbeilegung/Universalschlichtungsstelle</h3>
               <p style={{ marginBottom: '16px' }}>
                 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
               </p>
             </div>
           ) : (
             <div className="legal-content">
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-main)', fontWeight: 600 }}>1. Datenschutz auf einen Blick</h3>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-heading)', fontWeight: 600 }}>1. Datenschutz auf einen Blick</h3>
               <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', fontWeight: 600, marginTop: '16px' }}>Allgemeine Hinweise</h4>
               <p style={{ marginBottom: '16px' }}>
                 Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.
@@ -88,7 +88,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
                 Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
               </p>
 
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '28px' }}>2. Hosting</h3>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-heading)', fontWeight: 600, marginTop: '28px' }}>2. Hosting</h3>
               <p style={{ marginBottom: '16px' }}>
                 Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
               </p>
@@ -100,7 +100,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
                 Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).
               </p>
 
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '28px' }}>3. Allgemeine Hinweise und Pflichtinformationen</h3>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-heading)', fontWeight: 600, marginTop: '28px' }}>3. Allgemeine Hinweise und Pflichtinformationen</h3>
               <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', fontWeight: 600, marginTop: '16px' }}>Datenschutz</h4>
               <p style={{ marginBottom: '16px' }}>
                 Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
@@ -147,7 +147,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
                 Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Hierzu können Sie sich jederzeit an uns wenden.
               </p>
 
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '28px' }}>4. Datenerfassung auf dieser Website</h3>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-heading)', fontWeight: 600, marginTop: '28px' }}>4. Datenerfassung auf dieser Website</h3>
               <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', fontWeight: 600, marginTop: '16px' }}>Kontaktformular und Buchungsanfragen</h4>
               <p style={{ marginBottom: '16px' }}>
                 Wenn Sie uns per Kontaktformular oder im Rahmen einer Buchungsanfrage Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
