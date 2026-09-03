@@ -454,7 +454,7 @@ function App() {
                 </div>
 
                 <div style={{ marginBottom: '24px' }}>
-                  <label style={{ display: 'block', fontWeight: 500, marginBottom: '12px' }}>Erstgespräch gewünscht</label>
+                  <label style={{ display: 'block', marginBottom: '8px', fontWeight: 500, fontSize: '0.9rem', color: 'var(--color-text-main)' }}>Erstgespräch gewünscht</label>
                   <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
                     <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontWeight: 'normal' }}>
                       <input
