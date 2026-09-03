@@ -93,7 +93,7 @@ function App() {
       <header className="hero">
         <div className="container hero-content">
           <div className="hero-text animate-on-scroll">
-            <h1>Du musst diesen Weg nicht alleine gehen.</h1>
+            <h1>Du musst diesen Weg <span className="hero-highlight">nicht alleine</span> gehen.</h1>
             <br />
             <p className="hero-subtitle">
               Deine ganzheitliche Begleitung im Kinderwunsch.
