@@ -131,11 +131,11 @@ function App() {
             </h1>
 
             <p className="hero-subtitle">
-              Deine ganzheitliche Begleitung im Kinderwunsch.
+              Deine <em>ganzheitliche</em> Begleitung im Kinderwunsch.
             </p>
 
             <p>
-              Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer begleite ich dich auf deinem Weg zum Wunschkind – mit Empathie, Erfahrung und Herz bin ich an deiner Seite.
+              Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer begleite ich dich auf deinem Weg zum Wunschkind – mit <strong>Empathie</strong>, <strong>Erfahrung</strong> und <strong>Herz</strong> bin ich an deiner Seite.
             </p>
 
             <div className="hero-actions">
@@ -199,10 +199,10 @@ function App() {
 
             <div className="about-text">
               <p>
-                Der Weg zum Wunschkind ist oft kein gerader Strich auf einem Test. Manchmal ist er ein jahrelanger, kräftezehrender Marathon. Ich kenne diesen Weg nicht nur aus Lehrbüchern, von Freunden oder Kollegen – <strong>ich bin ihn selbst acht Jahre lang gegangen.</strong> Aus tiefster eigener Erfahrung weiß ich, wie sich das Bangen, die Trauer und die schmerzhaften Rückschläge anfühlen. Etwas, das vermeintlich so einfach scheint - schwanger zu werden - wird zu einer scheinbar unlösbaren und unkontrollierbaren Situation. Ich selbst habe mich damals so ohnmächtig gefühlt und hätte all’ meine Fragen, Gedanken & Ängste gerne mit jemandem geteilt, der einen ganzheitlichen Blick auf das Thema Kinderwunsch wirft und mich empathisch und professionell begleitet.
+                Der Weg zum Wunschkind ist oft kein gerader Strich auf einem Test. Manchmal ist er ein jahrelanger, kräftezehrender Marathon. Ich kenne diesen Weg nicht nur aus Lehrbüchern, von Freunden oder Kollegen – <strong>ich bin ihn selbst acht Jahre lang gegangen.</strong> Aus tiefster eigener Erfahrung weiß ich, wie sich das Bangen, die Trauer und die schmerzhaften Rückschläge anfühlen. Etwas, das vermeintlich so einfach scheint - <em>schwanger zu werden</em> - wird zu einer scheinbar unlösbaren und unkontrollierbaren Situation. Ich selbst habe mich damals so ohnmächtig gefühlt und hätte all’ meine Fragen, Gedanken & Ängste gerne mit jemandem geteilt, der einen <strong>ganzheitlichen Blick</strong> auf das Thema Kinderwunsch wirft und mich <strong>empathisch</strong> und <strong>professionell</strong> begleitet.
               </p>
               <p>
-                Genau deshalb habe ich es mir zur Lebensaufgabe gemacht, Frauen und Paare auf diesem sensiblen Weg zu begleiten und einen Raum für dich zu schaffen, in dem deine Seele endlich wieder zur Ruhe kommen darf. Alle Gefühle haben im Gespräch ihren berechtigten Platz: Wut, Verzweiflung, Trauer – aber auch die leise, unerschütterliche Hoffnung. Und genau in dieser Hoffnung liegt deine Kraft: Gemeinsam gehen wir Schritt für Schritt vorwärts, im tiefen Vertrauen darauf, dass dein Weg ein gutes Ziel finden wird.
+                Genau deshalb habe ich es mir zur Lebensaufgabe gemacht, Frauen und Paare auf diesem sensiblen Weg zu begleiten und einen <strong>Raum für dich</strong> zu schaffen, in dem deine <em>Seele endlich wieder zur Ruhe kommen darf</em>. Alle Gefühle haben im Gespräch ihren berechtigten Platz: <strong>Wut</strong>, <strong>Verzweiflung</strong>, <strong>Trauer</strong> – aber auch die leise, unerschütterliche <strong>Hoffnung</strong>. Und genau in dieser Hoffnung liegt deine Kraft: Gemeinsam gehen wir Schritt für Schritt vorwärts, im tiefen Vertrauen darauf, dass dein Weg ein gutes Ziel finden wird.
               </p>
             </div>
           </div>
@@ -299,7 +299,7 @@ function App() {
 
           <div className="text-center animate-on-scroll" style={{ marginTop: '56px' }}>
             <p style={{ fontSize: '1.125rem', color: 'var(--color-text-main)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.7' }}>
-              Ganz egal, an welchem Punkt du gerade stehst: Wir schauen gemeinsam, was du <em>jetzt</em> brauchst, um wieder in deine Kraft zu finden.
+              Ganz egal, an welchem Punkt du gerade stehst: Wir schauen gemeinsam, was du <em>jetzt</em> brauchst, um wieder in deine <strong>Kraft</strong> zu finden.
             </p>
           </div>
         </div>
@@ -319,7 +319,7 @@ function App() {
             <div style={{ width: '56px', height: '3px', backgroundColor: 'var(--color-primary)', borderRadius: '2px', marginBottom: '28px' }}></div>
 
             <p style={{ fontSize: '1.15rem', lineHeight: '1.8', color: 'var(--color-text-main)', marginBottom: '32px' }}>
-              Ich bin Kathrin, ausgebildete ganzheitliche Kinderwunschberaterin, Business Coach und habe 10 Jahre Erfahrung in der Persönlichkeitsentwicklung von jungen Erwachsenen. Mit dieser Verbindung aus tiefem Mitgefühl und professioneller Struktur begleite ich dich dabei, um dir in einer emotionalen Zeit die Stabilität und das Vertrauen zurückzugeben, das du gerade brauchst. Aus eigener Erfahrung weiß ich, wie viel Kraft in dir steckt – lass’ sie uns gemeinsam wieder sichtbar machen!
+              Ich bin Kathrin, ausgebildete <strong>ganzheitliche Kinderwunschberaterin</strong>, <strong>Business Coach</strong> und habe <strong>10 Jahre Erfahrung</strong> in der Persönlichkeitsentwicklung von jungen Erwachsenen. Mit dieser Verbindung aus <em>tiefem Mitgefühl</em> und <em>professioneller Struktur</em> begleite ich dich dabei, um dir in einer emotionalen Zeit die <strong>Stabilität</strong> und das <strong>Vertrauen</strong> zurückzugeben, das du gerade brauchst. Aus eigener Erfahrung weiß ich, wie viel Kraft in dir steckt – <em>lass’ sie uns gemeinsam wieder sichtbar machen!</em>
             </p>
 
             {/* Certification Badge */}
@@ -383,7 +383,7 @@ function App() {
               </div>
 
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.65', marginBottom: '24px' }}>
-                Der Kinderwunschweg kann emotional aufwühlend sein und <strong>brennende Fragen</strong> oder <strong>Sorgen</strong> hinterlassen, die dich gedanklich kaum zur Ruhe kommen lassen. In unserem Erstgespräch schenke ich dir einen geschützten, bewertungsfreien Raum, in dem alles, was dich aktuell belastet, laut ausgesprochen und sortiert werden darf. Gemeinsam ordnen wir das <strong>Chaos im Kopf</strong>, damit du schon nach dem ersten Gespräch mit spürbar mehr <strong>Klarheit</strong>, <strong>Erleichterung</strong> und einem <strong>sicheren Gefühl</strong> für deine nächsten Schritte nach Hause gehst. Lass uns den ersten Schritt gemeinsam machen.
+                Der Kinderwunschweg kann emotional aufwühlend sein und <strong>brennende Fragen</strong> oder <strong>Sorgen</strong> hinterlassen, die dich gedanklich kaum zur Ruhe kommen lassen. In unserem Erstgespräch schenke ich dir einen <em>geschützten, bewertungsfreien Raum</em>, in dem alles, was dich aktuell belastet, laut ausgesprochen und sortiert werden darf. Gemeinsam ordnen wir das <strong>Chaos im Kopf</strong>, damit du schon nach dem ersten Gespräch mit spürbar mehr <strong>Klarheit</strong>, <strong>Erleichterung</strong> und einem <strong>sicheren Gefühl</strong> für deine nächsten Schritte nach Hause gehst. <em>Lass uns den ersten Schritt gemeinsam machen.</em>
               </p>
 
               <div style={{ borderTop: '1px solid var(--color-border-subtle)', paddingTop: '20px', marginBottom: '24px' }}>
