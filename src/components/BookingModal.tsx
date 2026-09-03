@@ -304,14 +304,20 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, ini
           {step === 5 && (
             <div className="booking-step booking-success-step animate-fade-in">
               <div className="success-icon-wrapper">
-                <CheckCircle size={48} color="var(--color-primary)" />
+                <div className="success-icon-badge">
+                  <CheckCircle size={38} />
+                </div>
               </div>
-              <h3>Vielen Dank für Ihre Anfrage!</h3>
-              <p>Ihr Termin für das <strong>{activeService?.title}</strong> am <strong>{selectedDate?.toLocaleDateString('de-DE', { day: 'numeric', month: 'long' })} um {selectedTime} Uhr</strong> wurde erfolgreich reserviert.</p>
-              <p className="success-subtext">Sie erhalten in Kürze eine Bestätigung per E-Mail mit allen weiteren Informationen zum Zoom-Meeting sowie zur Bezahlung.</p>
+              <h3 style={{ fontSize: '1.65rem', marginBottom: '12px' }}>Vielen Dank für deine Anfrage!</h3>
+              <p style={{ color: 'var(--color-text-main)', fontSize: '1.05rem', lineHeight: '1.6' }}>
+                Dein Termin für das <strong>{activeService?.title}</strong> am <strong>{selectedDate?.toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' })} um {selectedTime} Uhr</strong> wurde erfolgreich angefragt.
+              </p>
+              <p className="success-subtext" style={{ fontSize: '0.925rem', marginTop: '16px' }}>
+                Du erhältst in Kürze eine persönliche Bestätigung per E-Mail mit allen weiteren Informationen zum Zoom-Meeting sowie zur Bezahlung.
+              </p>
               
-              <button className="btn btn-outline" onClick={handleClose} style={{ marginTop: '24px', width: '100%' }}>
-                Schließen
+              <button className="btn btn-primary" onClick={handleClose} style={{ marginTop: '28px', width: '100%' }}>
+                Verstanden & Schließen
               </button>
             </div>
           )}
