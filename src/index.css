@@ -244,7 +244,10 @@ a {
   line-height: 1.7;
 }
 
-.hero-description {
+.hero-description,
+.about-text p,
+.strengthen-description,
+.pricing-description {
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
@@ -905,7 +908,7 @@ a {
   gap: 32px;
   margin-top: 48px;
   align-items: stretch;
-  max-width: 850px;
+  max-width: 940px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -913,7 +916,7 @@ a {
 .pricing-card {
   background-color: var(--color-surface);
   border-radius: var(--radius-lg);
-  padding: 48px 32px;
+  padding: 44px 28px;
   box-shadow: var(--shadow-md);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
@@ -985,6 +988,13 @@ a {
   font-weight: 500;
   color: var(--color-primary);
   margin-left: 4px;
+}
+
+.pricing-description {
+  text-wrap: pretty;
+  hyphenate-limit-chars: 5 3 2;
+  letter-spacing: -0.005em;
+  word-spacing: -0.01em;
 }
 
 .pricing-description strong {

@@ -75,7 +75,7 @@ function App() {
       <nav className="navbar">
         <div className="container nav-container">
           <div className="nav-logo">
-            Kathrin <span>Scheu</span> <span style={{ color: '#000000' }}>|</span> <span>Ganzheitliche Kinderwunschberaterin</span>
+            Kathrin <span>Scheu</span> <span>|</span> <span>Ganzheitliche Kinderwunschberaterin</span>
           </div>
           <div className="nav-links">
             <a href="#about" className="nav-link">Über mich</a>
@@ -238,7 +238,7 @@ function App() {
           <div className="animate-on-scroll" style={{ textAlign: 'left' }}>
             <h2 className="section-title">Warum ich dich auf deinem Weg <span className="text-highlight-italic">stärken</span> kann</h2>
             <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-primary)', marginBottom: '32px' }}></div>
-            <p style={{ fontSize: '1.15rem', lineHeight: '1.8', color: 'var(--color-text-main)', marginBottom: '32px' }}>
+            <p className="strengthen-description" style={{ fontSize: '1.15rem', lineHeight: '1.8', color: 'var(--color-text-main)', marginBottom: '32px' }}>
               Ich bin Kathrin, ausgebildete <span className="text-highlight-bold">ganzheitliche Kinderwunschberaterin</span>, <span className="text-highlight-bold">Business Coach</span> und habe 10 Jahre Erfahrung in der <span className="text-highlight-bold">Persönlichkeitsentwicklung</span> von jungen Erwachsenen. Mit dieser Verbindung aus <span className="text-highlight-bold">tiefem Mitgefühl</span> und <span className="text-highlight-bold">professioneller Struktur</span> begleite ich dich dabei, um dir in einer emotionalen Zeit die <span className="text-highlight-bold">Stabilität</span> und das <span className="text-highlight-bold">Vertrauen</span> zurückzugeben, das du gerade brauchst. Aus eigener Erfahrung weiß ich, wie viel Kraft in dir steckt. <span className="text-highlight-italic">Lass’ sie uns gemeinsam wieder sichtbar machen!</span>
             </p>
 
@@ -320,9 +320,9 @@ function App() {
                 <h3>Erstgespräch</h3>
               </div>
               <p className="pricing-description" style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '24px' }}>
-                Der Kinderwunschweg kann emotional aufwühlend sein und <strong className="text-highlight-bold">brennende Fragen</strong> oder <strong className="text-highlight-bold">Sorgen</strong> hinterlassen, die dich gedanklich kaum zur Ruhe kommen lassen. In unserem Erstgespräch schenke ich dir einen geschützten, bewertungsfreien Raum, in dem alles, was dich aktuell belastet, laut ausgesprochen und sortiert werden darf. Gemeinsam ordnen wir das <strong className="text-highlight-bold">Chaos im Kopf</strong>, damit du schon nach dem ersten Gespräch mit spürbar mehr <strong className="text-highlight-bold">Klarheit</strong>, <strong className="text-highlight-bold">Erleichterung</strong> und einem <strong className="text-highlight-bold">sicheren Gefühl</strong> für deine nächsten Schritte nach Hause gehst. <span className="text-highlight-italic">Lass’ uns den ersten Schritt gemeinsam machen.</span>
+                Der Kinder&shy;wunsch&shy;weg kann emotional aufwühlend sein und <strong className="text-highlight-bold">brennende Fragen</strong> oder <strong className="text-highlight-bold">Sorgen</strong> hinterlassen, die dich gedanklich kaum zur Ruhe kommen lassen. In unserem Erstgespräch schenke ich dir einen geschützten, bewertungsfreien Raum, in dem alles, was dich aktuell belastet, laut ausgesprochen und sortiert werden darf. Gemeinsam ordnen wir das <strong className="text-highlight-bold">Chaos im Kopf</strong>, damit du schon nach dem ersten Gespräch mit spürbar mehr <strong className="text-highlight-bold">Klarheit</strong>, <strong className="text-highlight-bold">Erleichterung</strong> und einem <strong className="text-highlight-bold">sicheren Gefühl</strong> für deine nächsten Schritte nach Hause gehst. <span className="text-highlight-italic">Lass’ uns den ersten Schritt gemeinsam machen.</span>
               </p>
-              <div style={{ borderTop: '1px solid var(--color-bg-secondary)', paddingTop: '20px', marginBottom: '24px' }}>
+              <div style={{ marginTop: 'auto', borderTop: '1px solid var(--color-bg-secondary)', paddingTop: '20px', marginBottom: '24px' }}>
                 <h4 style={{ fontSize: '1rem', marginBottom: '12px', fontWeight: 600 }}>Mein Angebot für dich:</h4>
                 <ul className="pricing-features" style={{ margin: 0 }}>
                   <li className="pricing-feature-item">
@@ -342,7 +342,7 @@ function App() {
               <button
                 onClick={() => handleOpenBooking('initial')}
                 className="btn btn-outline"
-                style={{ width: '100%', marginTop: 'auto' }}
+                style={{ width: '100%' }}
               >
                 Erstgespräch buchen
               </button>
@@ -356,7 +356,7 @@ function App() {
               <p className="pricing-description" style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '24px' }}>
                 Du merkst nach dem Erstgespräch, dass du dir eine <strong className="text-highlight-bold">weiterführende, intensive Wegbegleitung</strong> wünschst? Nachdem wir im Erstgespräch die Basis gelegt haben, gehen wir in einem oder mehreren Folgegesprächen Schritt für Schritt weiter. Wir nehmen uns den Raum für deine <strong className="text-highlight-bold">aktuellen Fragen</strong>, sortieren die nächsten <strong className="text-highlight-bold">medizinischen</strong> oder <strong className="text-highlight-bold">emotionalen Schritte</strong> und fangen aufkommende <strong className="text-highlight-bold">Sorgen</strong> und <strong className="text-highlight-bold">Ängste</strong> direkt auf. Dabei knüpfen wir genau dort an, wo du gerade stehst und dir Begleitung wünschst. <span className="text-highlight-italic">So entwickeln wir zusammen eine klare Perspektive, mit der du mutig und zuversichtlich nach vorne blicken kannst.</span>
               </p>
-              <div style={{ borderTop: '1px solid var(--color-bg-secondary)', paddingTop: '20px', marginBottom: '24px' }}>
+              <div style={{ marginTop: 'auto', borderTop: '1px solid var(--color-bg-secondary)', paddingTop: '20px', marginBottom: '24px' }}>
                 <h4 style={{ fontSize: '1rem', marginBottom: '12px', fontWeight: 600 }}>Mein Angebot für dich:</h4>
                 <ul className="pricing-features" style={{ margin: 0 }}>
                   <li className="pricing-feature-item">
@@ -376,7 +376,7 @@ function App() {
               <button
                 onClick={() => handleOpenBooking('followup')}
                 className="btn btn-outline"
-                style={{ width: '100%', marginTop: 'auto' }}
+                style={{ width: '100%' }}
               >
                 Folgegespräch buchen
               </button>
