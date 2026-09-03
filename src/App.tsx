@@ -98,8 +98,8 @@ function App() {
             <p className="hero-subtitle">
               Deine ganzheitliche Begleitung im Kinderwunsch.
             </p>
-            <p>
-              Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer begleite ich dich auf deinem Weg zum Wunschkind – mit Empathie, Erfahrung und Herz bin ich an deiner Seite.
+            <p className="hero-description">
+              Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer begleite ich dich auf deinem Weg zum Wunschkind – mit <span style={{ hyphens: 'none' }}>Empathie</span>, Erfahrung und Herz bin ich an deiner Seite.
             </p>
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
               <button onClick={() => handleOpenBooking('initial')} className="btn btn-primary" style={{ cursor: 'pointer' }}>

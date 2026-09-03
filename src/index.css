@@ -232,6 +232,13 @@ a {
   line-height: 1.7;
 }
 
+.hero-description {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
 .hero-image-wrapper {
   position: relative;
   border-radius: var(--radius-lg);
