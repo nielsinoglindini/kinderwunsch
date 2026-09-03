@@ -99,7 +99,7 @@ function App() {
               Deine <span className="hero-highlight">ganzheitliche</span> Begleitung im Kinderwunsch.
             </p>
             <p className="hero-description">
-              Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer begleite ich dich auf deinem Weg zum Wunschkind – mit <span style={{ hyphens: 'none' }}>Empathie</span>, Erfahrung und Herz bin ich an deiner Seite.
+              Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer begleite ich dich auf deinem Weg zum Wunschkind – mit <span className="hero-highlight-bold" style={{ hyphens: 'none' }}>Empathie</span>, <span className="hero-highlight-bold">Erfahrung</span> und <span className="hero-highlight-bold">Herz</span> bin ich an deiner Seite.
             </p>
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
               <button onClick={() => handleOpenBooking('initial')} className="btn btn-primary" style={{ cursor: 'pointer' }}>
@@ -137,14 +137,14 @@ function App() {
 
           {/* Right: Text */}
           <div className="animate-on-scroll" style={{ paddingLeft: '24px' }}>
-            <h2 className="section-title">Wer dich auf deinem Weg begleitet</h2>
+            <h2 className="section-title">Wer dich auf deinem Weg <span className="text-highlight-italic">begleitet</span></h2>
             <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-primary)', marginBottom: '32px' }}></div>
             <div className="about-text">
               <p>
-                Der Weg zum Wunschkind ist oft kein gerader Strich auf einem Test. Manchmal ist er ein jahrelanger, kräftezehrender Marathon. Ich kenne diesen Weg nicht nur aus Lehrbüchern, von Freunden oder Kollegen – ich bin ihn selbst acht Jahre lang gegangen. Aus tiefster eigener Erfahrung weiß ich, wie sich das Bangen, die Trauer und die schmerzhaften Rückschläge anfühlen. Etwas, das vermeintlich so einfach scheint - schwanger zu werden - wird zu einer scheinbar unlösbaren und unkontrollierbaren Situation. Ich selbst habe mich damals so ohnmächtig gefühlt und hätte all’ meine Fragen, Gedanken & Ängste gerne mit jemandem geteilt, der einen ganzheitlichen Blick auf das Thema Kinderwunsch wirft und mich empathisch und professionell begleitet.
+                Der Weg zum Wunschkind ist oft kein gerader Strich auf einem Test. Manchmal ist er ein jahrelanger, kräftezehrender Marathon. Ich kenne diesen Weg nicht nur aus Lehrbüchern, von Freunden oder Kollegen – <span className="text-highlight-bold">ich bin ihn selbst acht Jahre lang gegangen.</span> Aus tiefster eigener Erfahrung weiß ich, wie sich das Bangen, die Trauer und die schmerzhaften Rückschläge anfühlen. Etwas, das vermeintlich so einfach scheint - <span className="text-highlight-bold">schwanger zu werden</span> - wird zu einer scheinbar unlösbaren und unkontrollierbaren Situation. Ich selbst habe mich damals so ohnmächtig gefühlt und hätte all’ meine Fragen, Gedanken & Ängste gerne mit jemandem geteilt, der einen <span className="text-highlight-bold">ganzheitlichen Blick</span> auf das Thema Kinderwunsch wirft und mich <span className="text-highlight-bold">empathisch</span> und <span className="text-highlight-bold">professionell</span> begleitet.
               </p>
               <p>
-                Genau deshalb habe ich es mir zur Lebensaufgabe gemacht, Frauen und Paare auf diesem sensiblen Weg zu begleiten und einen Raum für dich zu schaffen, in dem deine Seele endlich wieder zur Ruhe kommen darf. Alle Gefühle haben im Gespräch ihren berechtigten Platz: Wut, Verzweiflung, Trauer – aber auch die leise, unerschütterliche Hoffnung. Und genau in dieser Hoffnung liegt deine Kraft: Gemeinsam gehen wir Schritt für Schritt vorwärts, im tiefen Vertrauen darauf, dass dein Weg ein gutes Ziel finden wird.
+                Genau deshalb habe ich es mir zur Lebensaufgabe gemacht, Frauen und Paare auf diesem sensiblen Weg zu begleiten und einen <span className="text-highlight-bold">Raum für dich</span> zu schaffen, in dem deine <span className="text-highlight-bold">Seele endlich wieder zur Ruhe kommen darf.</span> Alle Gefühle haben im Gespräch ihren berechtigten Platz: <span className="text-highlight-bold">Wut, Verzweiflung, Trauer</span> – aber auch die leise, unerschütterliche <span className="text-highlight-bold">Hoffnung</span>. Und genau in dieser Hoffnung liegt deine Kraft: Gemeinsam gehen wir Schritt für Schritt vorwärts, im tiefen Vertrauen darauf, dass dein Weg ein gutes Ziel finden wird.
               </p>
             </div>
           </div>
@@ -155,9 +155,9 @@ function App() {
       <section id="services" className="section">
         <div className="container">
           <div className="text-center animate-on-scroll">
-            <h2 className="section-title">Wie ich dich unterstützen kann</h2>
+            <h2 className="section-title">Wie ich dich <span className="text-highlight-italic">unterstützen</span> kann</h2>
             <p className="section-subtitle">
-              Ich begleite dich sicher, einfühlsam und absolut urteilsfrei durch deine individuelle Situation:
+              Ich begleite dich <span className="text-highlight-bold">sicher</span>, <span className="text-highlight-bold">einfühlsam</span> und absolut <span className="text-highlight-bold">urteilsfrei</span> durch deine individuelle Situation:
             </p>
           </div>
 
@@ -225,7 +225,7 @@ function App() {
 
           <div className="text-center animate-on-scroll" style={{ marginTop: '48px' }}>
             <p style={{ fontSize: '1.125rem', color: 'var(--color-text-muted)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
-              Ganz egal, an welchem Punkt du gerade stehst: Wir schauen gemeinsam, was du <em>jetzt</em> brauchst, um wieder in deine Kraft zu finden.
+              Ganz egal, an welchem Punkt du gerade stehst: Wir schauen gemeinsam, was du <span className="text-highlight-italic">jetzt</span> brauchst, um wieder in deine <span className="text-highlight-bold">Kraft</span> zu finden.
             </p>
           </div>
         </div>

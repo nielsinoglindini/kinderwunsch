@@ -209,9 +209,21 @@ a {
   letter-spacing: -0.02em;
 }
 
+.text-highlight-italic,
 .hero-highlight,
 .hero-text h1 em {
   font-style: italic;
+  color: #B58A80;
+}
+
+.text-highlight-bold,
+.hero-highlight-bold {
+  font-weight: 600;
+  color: #B58A80;
+  font-style: normal;
+}
+
+.text-highlight-color {
   color: #B58A80;
 }
 
