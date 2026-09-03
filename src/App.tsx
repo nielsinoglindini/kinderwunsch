@@ -309,7 +309,7 @@ function App() {
           <div className="text-center animate-on-scroll">
             <h2 className="section-title">Was du <span className="text-highlight-italic">erwarten</span> kannst und dafür <span className="text-highlight-italic">investierst</span></h2>
             <p className="section-subtitle">
-              Transparente Preisgestaltung für eine <span className="text-highlight-italic">verlässliche und liebevolle Unterstützung</span> auf deinem individuellen Weg.
+              Transparente Preisgestaltung für eine <span className="text-highlight-bold">verlässliche</span> und <span className="text-highlight-bold">liebevolle Unterstützung</span> auf deinem individuellen Weg.
             </p>
           </div>
 
@@ -320,7 +320,7 @@ function App() {
                 <h3>Erstgespräch</h3>
               </div>
               <p className="pricing-description" style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '24px' }}>
-                Der Kinderwunschweg kann emotional aufwühlend sein und <strong className="text-highlight-bold">brennende Fragen</strong> oder <strong className="text-highlight-bold">Sorgen</strong> hinterlassen, die dich gedanklich kaum zur Ruhe kommen lassen. In unserem Erstgespräch schenke ich dir einen geschützten, bewertungsfreien Raum, in dem alles, was dich aktuell belastet, laut ausgesprochen und sortiert werden darf. Gemeinsam ordnen wir das <strong className="text-highlight-bold">Chaos im Kopf</strong>, damit du schon nach dem ersten Gespräch mit spürbar mehr <strong className="text-highlight-bold">Klarheit</strong>, <strong className="text-highlight-bold">Erleichterung</strong> und einem <strong className="text-highlight-bold">sicheren Gefühl</strong> für deine nächsten Schritte nach Hause gehst. <span className="text-highlight-italic">Lass uns den ersten Schritt gemeinsam machen.</span>
+                Der Kinderwunschweg kann emotional aufwühlend sein und <strong className="text-highlight-bold">brennende Fragen</strong> oder <strong className="text-highlight-bold">Sorgen</strong> hinterlassen, die dich gedanklich kaum zur Ruhe kommen lassen. In unserem Erstgespräch schenke ich dir einen geschützten, bewertungsfreien Raum, in dem alles, was dich aktuell belastet, laut ausgesprochen und sortiert werden darf. Gemeinsam ordnen wir das <strong className="text-highlight-bold">Chaos im Kopf</strong>, damit du schon nach dem ersten Gespräch mit spürbar mehr <strong className="text-highlight-bold">Klarheit</strong>, <strong className="text-highlight-bold">Erleichterung</strong> und einem <strong className="text-highlight-bold">sicheren Gefühl</strong> für deine nächsten Schritte nach Hause gehst. <span className="text-highlight-italic">Lass’ uns den ersten Schritt gemeinsam machen.</span>
               </p>
               <div style={{ borderTop: '1px solid var(--color-bg-secondary)', paddingTop: '20px', marginBottom: '24px' }}>
                 <h4 style={{ fontSize: '1rem', marginBottom: '12px', fontWeight: 600 }}>Mein Angebot für dich:</h4>
