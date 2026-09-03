@@ -96,7 +96,7 @@ function App() {
             <h1>Du musst diesen Weg <span className="hero-highlight">nicht alleine</span> gehen.</h1>
             <br />
             <p className="hero-subtitle">
-              Deine ganzheitliche Begleitung im Kinderwunsch.
+              Deine <span className="hero-highlight">ganzheitliche</span> Begleitung im Kinderwunsch.
             </p>
             <p className="hero-description">
               Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer begleite ich dich auf deinem Weg zum Wunschkind – mit <span style={{ hyphens: 'none' }}>Empathie</span>, Erfahrung und Herz bin ich an deiner Seite.
