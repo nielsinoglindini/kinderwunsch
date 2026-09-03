@@ -128,8 +128,8 @@ function App() {
           <div className="animate-on-scroll">
             <div className="about-image-wrapper">
               <img
-                src="about_kathrin.png"
-                alt="Kathrin - Ihre Kinderwunschbegleiterin"
+                src="about_footprint.jpg"
+                alt="Wegbegleitung - Ein Schritt nach dem anderen"
                 className="about-image"
               />
             </div>
