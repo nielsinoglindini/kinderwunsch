@@ -236,10 +236,10 @@ function App() {
         <div className="container strengthen-grid">
           {/* Left: Text Content */}
           <div className="animate-on-scroll" style={{ textAlign: 'left' }}>
-            <h2 className="section-title">Warum ich dich auf deinem Weg stärken kann</h2>
+            <h2 className="section-title">Warum ich dich auf deinem Weg <span className="text-highlight-italic">stärken</span> kann</h2>
             <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-primary)', marginBottom: '32px' }}></div>
             <p style={{ fontSize: '1.15rem', lineHeight: '1.8', color: 'var(--color-text-main)', marginBottom: '32px' }}>
-              Ich bin Kathrin, ausgebildete ganzheitliche Kinderwunschberaterin, Business Coach und habe 10 Jahre Erfahrung in der Persönlichkeitsentwicklung von jungen Erwachsenen. Mit dieser Verbindung aus tiefem Mitgefühl und professioneller Struktur begleite ich dich dabei, um dir in einer emotionalen Zeit die Stabilität und das Vertrauen zurückzugeben, das du gerade brauchst. Aus eigener Erfahrung weiß ich, wie viel Kraft in dir steckt – lass’ sie uns gemeinsam wieder sichtbar machen!
+              Ich bin Kathrin, ausgebildete <span className="text-highlight-bold">ganzheitliche Kinderwunschberaterin</span>, <span className="text-highlight-bold">Business Coach</span> und habe 10 Jahre Erfahrung in der <span className="text-highlight-bold">Persönlichkeitsentwicklung</span> von jungen Erwachsenen. Mit dieser Verbindung aus <span className="text-highlight-bold">tiefem Mitgefühl</span> und <span className="text-highlight-bold">professioneller Struktur</span> begleite ich dich dabei, um dir in einer emotionalen Zeit die <span className="text-highlight-bold">Stabilität</span> und das <span className="text-highlight-bold">Vertrauen</span> zurückzugeben, das du gerade brauchst. Aus eigener Erfahrung weiß ich, wie viel Kraft in dir steckt. <span className="text-highlight-italic">Lass’ sie uns gemeinsam wieder sichtbar machen!</span>
             </p>
 
             {/* Certification Badge */}
