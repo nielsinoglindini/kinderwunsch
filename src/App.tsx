@@ -439,7 +439,7 @@ function App() {
 
                 <div className="form-group" style={{ marginBottom: '24px' }}>
                   <label htmlFor="contact-message" style={{ display: 'block', marginBottom: '8px', fontWeight: 500 }}>
-                    Deine Nachricht: Schreibe mir gern‘ ein paar Zeilen über dich und wo du gerade stehst.
+                    Schreibe mir gern‘ ein paar Zeilen über dich und wo du gerade stehst.
                   </label>
                   <textarea
                     id="contact-message"
@@ -448,7 +448,7 @@ function App() {
                     value={contactForm.message}
                     onChange={handleContactChange}
                     required
-                    placeholder="Deine Nachricht (Freitextfeld - unbegrenzte Wortanzahl)"
+                    placeholder="Deine Nachricht"
                     style={{ width: '100%', padding: '12px 16px', border: '1px solid var(--color-accent)', borderRadius: 'var(--radius-md)', backgroundColor: 'var(--color-surface)', fontSize: '1rem', resize: 'vertical', fontFamily: 'inherit' }}
                   />
                 </div>
