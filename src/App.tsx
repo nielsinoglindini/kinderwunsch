@@ -307,9 +307,9 @@ function App() {
       <section id="pricing" className="section">
         <div className="container">
           <div className="text-center animate-on-scroll">
-            <h2 className="section-title">Was du erwarten kannst und dafür investierst</h2>
+            <h2 className="section-title">Was du <span className="text-highlight-italic">erwarten</span> kannst und dafür <span className="text-highlight-italic">investierst</span></h2>
             <p className="section-subtitle">
-              Transparente Preisgestaltung für eine verlässliche und liebevolle Unterstützung auf deinem individuellen Weg.
+              Transparente Preisgestaltung für eine <span className="text-highlight-italic">verlässliche und liebevolle Unterstützung</span> auf deinem individuellen Weg.
             </p>
           </div>
 
@@ -320,7 +320,7 @@ function App() {
                 <h3>Erstgespräch</h3>
               </div>
               <p className="pricing-description" style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '24px' }}>
-                Der Kinderwunschweg kann emotional aufwühlend sein und <strong>brennende Fragen</strong> oder <strong>Sorgen</strong> hinterlassen, die dich gedanklich kaum zur Ruhe kommen lassen. In unserem Erstgespräch schenke ich dir einen geschützten, bewertungsfreien Raum, in dem alles, was dich aktuell belastet, laut ausgesprochen und sortiert werden darf. Gemeinsam ordnen wir das <strong>Chaos im Kopf</strong>, damit du schon nach dem ersten Gespräch mit spürbar mehr <strong>Klarheit</strong>, <strong>Erleichterung</strong> und einem <strong>sicheren Gefühl</strong> für deine nächsten Schritte nach Hause gehst. Lass uns den ersten Schritt gemeinsam machen.
+                Der Kinderwunschweg kann emotional aufwühlend sein und <strong className="text-highlight-bold">brennende Fragen</strong> oder <strong className="text-highlight-bold">Sorgen</strong> hinterlassen, die dich gedanklich kaum zur Ruhe kommen lassen. In unserem Erstgespräch schenke ich dir einen geschützten, bewertungsfreien Raum, in dem alles, was dich aktuell belastet, laut ausgesprochen und sortiert werden darf. Gemeinsam ordnen wir das <strong className="text-highlight-bold">Chaos im Kopf</strong>, damit du schon nach dem ersten Gespräch mit spürbar mehr <strong className="text-highlight-bold">Klarheit</strong>, <strong className="text-highlight-bold">Erleichterung</strong> und einem <strong className="text-highlight-bold">sicheren Gefühl</strong> für deine nächsten Schritte nach Hause gehst. <span className="text-highlight-italic">Lass uns den ersten Schritt gemeinsam machen.</span>
               </p>
               <div style={{ borderTop: '1px solid var(--color-bg-secondary)', paddingTop: '20px', marginBottom: '24px' }}>
                 <h4 style={{ fontSize: '1rem', marginBottom: '12px', fontWeight: 600 }}>Mein Angebot für dich:</h4>
@@ -354,7 +354,7 @@ function App() {
                 <h3>Folgegespräche</h3>
               </div>
               <p className="pricing-description" style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '24px' }}>
-                Du merkst nach dem Erstgespräch, dass du dir eine <strong>weiterführende, intensive Wegbegleitung</strong> wünschst? Nachdem wir im Erstgespräch die Basis gelegt haben, gehen wir in einem oder mehreren Folgegesprächen Schritt für Schritt weiter. Wir nehmen uns den Raum für deine <strong>aktuellen Fragen</strong>, sortieren die nächsten <strong>medizinischen</strong> oder <strong>emotionalen Schritte</strong> und fangen aufkommende <strong>Sorgen</strong> und <strong>Ängste</strong> direkt auf. Dabei knüpfen wir genau dort an, wo du gerade stehst und dir Begleitung wünschst.
+                Du merkst nach dem Erstgespräch, dass du dir eine <strong className="text-highlight-bold">weiterführende, intensive Wegbegleitung</strong> wünschst? Nachdem wir im Erstgespräch die Basis gelegt haben, gehen wir in einem oder mehreren Folgegesprächen Schritt für Schritt weiter. Wir nehmen uns den Raum für deine <strong className="text-highlight-bold">aktuellen Fragen</strong>, sortieren die nächsten <strong className="text-highlight-bold">medizinischen</strong> oder <strong className="text-highlight-bold">emotionalen Schritte</strong> und fangen aufkommende <strong className="text-highlight-bold">Sorgen</strong> und <strong className="text-highlight-bold">Ängste</strong> direkt auf. Dabei knüpfen wir genau dort an, wo du gerade stehst und dir Begleitung wünschst. <span className="text-highlight-italic">So entwickeln wir zusammen eine klare Perspektive, mit der du mutig und zuversichtlich nach vorne blicken kannst.</span>
               </p>
               <div style={{ borderTop: '1px solid var(--color-bg-secondary)', paddingTop: '20px', marginBottom: '24px' }}>
                 <h4 style={{ fontSize: '1rem', marginBottom: '12px', fontWeight: 600 }}>Mein Angebot für dich:</h4>

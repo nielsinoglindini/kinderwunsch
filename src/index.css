@@ -987,6 +987,11 @@ a {
   margin-left: 4px;
 }
 
+.pricing-description strong {
+  color: #B58A80;
+  font-weight: 600;
+}
+
 .pricing-features {
   list-style: none;
   padding: 0;
