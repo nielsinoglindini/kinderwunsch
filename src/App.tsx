@@ -47,6 +47,7 @@ function App() {
     setSelectedService(service);
     setIsBookingOpen(true);
   };
+  void handleOpenBooking;
 
   // Simple intersection observer setup for fade-in animations
   useEffect(() => {
@@ -81,7 +82,6 @@ function App() {
             <a href="#about" className="nav-link">Über mich</a>
             <a href="#services" className="nav-link">Leistungen</a>
             <a href="#pricing" className="nav-link">Preise</a>
-            <button onClick={() => handleOpenBooking()} className="btn btn-outline" style={{ padding: '8px 20px', cursor: 'pointer' }}>Termin buchen</button>
           </div>
           <div className="mobile-menu" style={{ display: 'none' /* Handled by media queries normally */ }}>
             <Menu className="text-gray-600" />
@@ -102,10 +102,7 @@ function App() {
               Ein Kinderwunsch kann eine hochemotionale Reise sein. Zwischen Hoffnung, Ungewissheit und Trauer begleite ich dich auf deinem Weg zum Wunschkind – mit <span className="hero-highlight-bold" style={{ hyphens: 'none' }}>Empathie</span>, <span className="hero-highlight-bold">Erfahrung</span> und <span className="hero-highlight-bold">Herz</span> bin ich an deiner Seite.
             </p>
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <button onClick={() => handleOpenBooking('initial')} className="btn btn-primary" style={{ cursor: 'pointer' }}>
-                Erstgespräch buchen
-              </button>
-              <a href="#services" className="btn btn-outline">
+              <a href="#services" className="btn btn-primary">
                 Mehr erfahren
               </a>
             </div>
@@ -513,7 +510,6 @@ function App() {
                 <li><a href="#about">Über mich</a></li>
                 <li><a href="#services">Leistungen</a></li>
                 <li><a href="#pricing">Preise</a></li>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); handleOpenBooking(); }}>Termin buchen</a></li>
               </ul>
             </div>
             <div className="footer-col">
