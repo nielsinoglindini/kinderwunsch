@@ -291,7 +291,7 @@ function App() {
           <div className="animate-on-scroll">
             <div className="strengthen-image-wrapper">
               <img
-                src="strengthen_graphic.jpg"
+                src="kathrin_laptop.jpg"
                 alt="Wachstum und Unterstützung im Kinderwunsch"
                 className="strengthen-image"
               />
