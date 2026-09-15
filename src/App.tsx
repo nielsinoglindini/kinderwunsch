@@ -489,7 +489,7 @@ function App() {
               </form>
             )}
             <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginTop: '24px' }}>
-              Ihre Daten werden vertraulich behandelt (Standort DE/DSGVO konform).
+              Deine Daten werden selbstverständlich absolut vertraulich behandelt.
             </p>
           </div>
         </div>

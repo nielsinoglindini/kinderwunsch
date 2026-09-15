@@ -60,102 +60,32 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
             </div>
           ) : (
             <div className="legal-content">
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-main)', fontWeight: 600 }}>1. Datenschutz auf einen Blick</h3>
-              <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', fontWeight: 600, marginTop: '16px' }}>Allgemeine Hinweise</h4>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-main)', fontWeight: 600 }}>1. Datenschutz auf einen Blick & Allgemeine Hinweise</h3>
               <p style={{ marginBottom: '16px' }}>
-                Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.
-              </p>
-
-              <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', fontWeight: 600, marginTop: '16px' }}>Datenerfassung auf dieser Website</h4>
-              <p style={{ marginBottom: '8px' }}><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong></p>
-              <p style={{ marginBottom: '16px' }}>
-                Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.
-              </p>
-              <p style={{ marginBottom: '8px' }}><strong>Wie erfassen wir Ihre Daten?</strong></p>
-              <p style={{ marginBottom: '16px' }}>
-                Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben.
-              </p>
-              <p style={{ marginBottom: '16px' }}>
-                Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
-              </p>
-              <p style={{ marginBottom: '8px' }}><strong>Wofür nutzen wir Ihre Daten?</strong></p>
-              <p style={{ marginBottom: '16px' }}>
-                Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.
-              </p>
-              <p style={{ marginBottom: '8px' }}><strong>Welche Rechte haben Sie bezüglich Ihrer Daten?</strong></p>
-              <p style={{ marginBottom: '16px' }}>
-                Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
+                Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit deinen personenbezogenen Daten passiert, wenn du diese Website besuchst. Personenbezogene Daten sind alle Daten, mit denen du persönlich identifiziert werden kannst. Die Datenverarbeitung auf dieser Website erfolgt durch die Websitebetreiberin. Deren Kontaktdaten kannst du dem Impressum dieser Website entnehmen. Deine Daten werden zum einen dadurch erhoben, dass du uns diese mitteilst (z. B. im Kontaktformular). Andere Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs) werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Du hast jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck deiner gespeicherten personenbezogenen Daten zu erhalten sowie deren Berichtigung oder Löschung zu verlangen. Zudem steht dir ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
               </p>
 
               <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '28px' }}>2. Hosting</h3>
               <p style={{ marginBottom: '16px' }}>
-                Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
-              </p>
-              <p style={{ marginBottom: '8px' }}><strong>Externes Hosting</strong></p>
-              <p style={{ marginBottom: '16px' }}>
-                Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Dies können v. a. IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Webseitenzugriffe und sonstige Daten, die über eine Website generiert werden, sein.
-              </p>
-              <p style={{ marginBottom: '16px' }}>
-                Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).
+                Wir hosten die Inhalte unserer Website bei folgendem Anbieter: IONOS. Anbieter ist die IONOS SE, Elgendorfer Str. 57, 56410 Montabaur (nachfolgend IONOS). Wenn du unsere Website besuchst, erfasst IONOS verschiedene Logfiles inklusive deiner IP-Adresse. Details entnimmst du der Datenschutzerklärung von IONOS: <a href="https://www.ionos.de/terms-gtc/terms-privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>https://www.ionos.de/terms-gtc/terms-privacy</a>. Die Verwendung von IONOS erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Um die datenschutzkonforme Verarbeitung zu gewährleisten, haben wir mit IONOS einen Vertrag zur Auftragsverarbeitung (AVV) geschlossen.
               </p>
 
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '28px' }}>3. Allgemeine Hinweise und Pflichtinformationen</h3>
-              <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', fontWeight: 600, marginTop: '16px' }}>Datenschutz</h4>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '28px' }}>3. Pflichtinformationen & Verantwortliche Stelle</h3>
               <p style={{ marginBottom: '16px' }}>
-                Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+                Die Betreiberin dieser Seiten nimmt den Schutz deiner persönlichen Daten sehr ernst. Wir behandeln deine personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften. Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann.
               </p>
-              <p style={{ marginBottom: '16px' }}>
-                Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Diese Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.
-              </p>
-              <p style={{ marginBottom: '16px' }}>
-                Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
-              </p>
-
-              <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', fontWeight: 600, marginTop: '16px' }}>Hinweis zur verantwortlichen Stelle</h4>
-              <p style={{ marginBottom: '8px' }}>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+              <p style={{ marginBottom: '8px' }}><strong>Hinweis zur verantwortlichen Stelle:</strong></p>
               <p style={{ marginBottom: '16px' }}>
                 Kathrin Scheu<br />
-                E-Mail: kontakt@kathrin-kinderwunsch.de
+                E-Mail: <a href="mailto:hallo@kinderwunschbegleitung-hamburg.de" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hallo@kinderwunschbegleitung-hamburg.de</a>
               </p>
               <p style={{ marginBottom: '16px' }}>
-                Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) decides.
-              </p>
-
-              <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', fontWeight: 600, marginTop: '16px' }}>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h4>
-              <p style={{ marginBottom: '16px' }}>
-                Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
+                Du kannst eine bereits erteilte Einwilligung zur Datenverarbeitung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Im Falle von Verstößen gegen die DSGVO steht den Betroffenen zudem ein Beschwerderecht bei einer Aufsichtsbehörde zu. Du hast außerdem das Recht, Daten, die wir automatisiert verarbeiten, an dich oder an einen Dritten aushändigen zu lassen.
               </p>
 
-              <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', fontWeight: 600, marginTop: '16px' }}>Beschwerderecht bei der zuständigen Aufsichtsbehörde</h4>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '28px' }}>4. Datenerfassung auf dieser Website (Kontaktformular & externe Dienste)</h3>
               <p style={{ marginBottom: '16px' }}>
-                Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
-              </p>
-
-              <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', fontWeight: 600, marginTop: '16px' }}>Recht auf Datenübertragbarkeit</h4>
-              <p style={{ marginBottom: '16px' }}>
-                Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.
-              </p>
-
-              <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', fontWeight: 600, marginTop: '16px' }}>Auskunft, Berichtigung und Löschung</h4>
-              <p style={{ marginBottom: '16px' }}>
-                Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.
-              </p>
-
-              <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', fontWeight: 600, marginTop: '16px' }}>Recht auf Einschränkung der Verarbeitung</h4>
-              <p style={{ marginBottom: '16px' }}>
-                Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Hierzu können Sie sich jederzeit an uns wenden.
-              </p>
-
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '28px' }}>4. Datenerfassung auf dieser Website</h3>
-              <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', fontWeight: 600, marginTop: '16px' }}>Kontaktformular und Buchungsanfragen</h4>
-              <p style={{ marginBottom: '16px' }}>
-                Wenn Sie uns per Kontaktformular oder im Rahmen einer Buchungsanfrage Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
-              </p>
-              <p style={{ marginBottom: '16px' }}>
-                Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) falls diese abgefragt wurde.
-              </p>
-              <p style={{ marginBottom: '16px' }}>
-                Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.
+                Wenn du uns per Kontaktformular oder im Rahmen einer Buchungsanfrage Anfragen zukommen lässt, werden deine Angaben inklusive der Kontaktdaten zwecks Bearbeitung der Anfrage bei uns gespeichert. Für die technische Bereitstellung und Weiterleitung der Formulardaten nutzen wir den externen Dienst Formspree (Formspree, Inc., 2155 S. Bascom Ave, Suite 210, Campbell, CA 95008, USA). Die von dir im Formular eingegebenen Daten werden auf den Servern dieses Anbieters verarbeitet, um sie an unsere E-Mail-Adresse zuzustellen. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern deine Anfrage mit der Erfüllung eines Vertrags zusammenhängt. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse (Art. 6 Abs. 1 lit. f DSGVO) oder auf deiner Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Wir haben mit dem Anbieter des Formular-Dienstes einen Vertrag zur Auftragsverarbeitung (Data Processing Agreement) geschlossen.
               </p>
             </div>
           )}
