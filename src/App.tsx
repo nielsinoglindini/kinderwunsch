@@ -82,6 +82,7 @@ function App() {
             <a href="#about" className="nav-link">Über mich</a>
             <a href="#services" className="nav-link">Leistungen</a>
             <a href="#pricing" className="nav-link">Preise</a>
+            <a href="#contact" className="nav-link">Kontakt</a>
           </div>
           <div className="mobile-menu" style={{ display: 'none' /* Handled by media queries normally */ }}>
             <Menu className="text-gray-600" />
