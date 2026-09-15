@@ -525,7 +525,7 @@ function App() {
           </div>
 
           <div className="footer-bottom" style={{ borderTop: 'none', paddingTop: 0, textAlign: 'center', color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>
-            &copy; {new Date().getFullYear()} Kathrin Kinderwunschbegleitung. Alle Rechte vorbehalten.
+            &copy; {new Date().getFullYear()} Kinderwunschbegleitung Hamburg. Alle Rechte vorbehalten.
           </div>
         </div>
       </footer>
