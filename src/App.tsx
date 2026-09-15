@@ -439,23 +439,23 @@ function App() {
                 <div style={{ marginBottom: '24px' }}>
                   <label style={{ display: 'block', marginBottom: '8px', fontWeight: 500, fontSize: '0.9rem', color: 'var(--color-text-main)' }}>Erstgespräch gewünscht</label>
                   <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
-                    <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontWeight: 'normal' }}>
+                    <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontWeight: 'normal', fontSize: '0.9rem', color: 'var(--color-text-main)' }}>
                       <input
                         type="checkbox"
                         name="inPresence"
                         checked={contactForm.inPresence}
                         onChange={handleContactChange}
-                        style={{ width: '18px', height: '18px', cursor: 'pointer', accentColor: 'var(--color-primary)' }}
+                        style={{ width: '16px', height: '16px', cursor: 'pointer', accentColor: 'var(--color-primary)' }}
                       />
                       <span>in Präsenz</span>
                     </label>
-                    <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontWeight: 'normal' }}>
+                    <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontWeight: 'normal', fontSize: '0.9rem', color: 'var(--color-text-main)' }}>
                       <input
                         type="checkbox"
                         name="onlineZoom"
                         checked={contactForm.onlineZoom}
                         onChange={handleContactChange}
-                        style={{ width: '18px', height: '18px', cursor: 'pointer', accentColor: 'var(--color-primary)' }}
+                        style={{ width: '16px', height: '16px', cursor: 'pointer', accentColor: 'var(--color-primary)' }}
                       />
                       <span>online via Zoom</span>
                     </label>
