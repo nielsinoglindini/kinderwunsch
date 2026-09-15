@@ -30,33 +30,32 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
         <div className="booking-modal-body" style={{ padding: '32px', overflowY: 'auto', maxHeight: '60vh', fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-text-main)', textAlign: 'left' }}>
           {type === 'impressum' ? (
             <div className="legal-content">
-              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600 }}>Angaben gemäß § 5 TMG</h3>
+              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600 }}>Angaben gemäß § 5 DDG</h3>
               <p style={{ marginBottom: '16px' }}>
                 Kathrin Scheu<br />
-                Ganzheitliche Kinderwunschberaterin<br />
-                Deutschland
+                Kinderwunschbegleitung Hamburg<br />
+                Schloßstraße 7b<br />
+                21465 Reinbek
               </p>
 
               <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '24px' }}>Kontakt</h3>
               <p style={{ marginBottom: '16px' }}>
-                E-Mail: <a href="mailto:kontakt@kathrin-kinderwunsch.de" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>kontakt@kathrin-kinderwunsch.de</a>
+                <a href="mailto:hallo@kinderwunschbegleitung-hamburg.de" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hallo@kinderwunschbegleitung-hamburg.de</a>
               </p>
 
-              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '24px' }}>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
+              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '24px' }}>Umsatzsteuer-ID</h3>
               <p style={{ marginBottom: '16px' }}>
-                Berufsbezeichnung: Ganzheitliche Kinderwunschberaterin, Business Coach<br />
-                Verliehen in: Deutschland
+                Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: DE463354093
               </p>
 
-              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '24px' }}>EU-Streitschlichtung</h3>
+              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '24px' }}>Redaktionell verantwortlich</h3>
               <p style={{ marginBottom: '16px' }}>
-                Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>https://ec.europa.eu/consumers/odr</a>.<br />
-                Unsere E-Mail-Adresse finden Sie oben im Impressum.
+                Kathrin Scheu
               </p>
 
-              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '24px' }}>Verbraucherstreitbeilegung/Universalschlichtungsstelle</h3>
+              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px', color: 'var(--color-text-main)', fontWeight: 600, marginTop: '24px' }}>Photocredits</h3>
               <p style={{ marginBottom: '16px' }}>
-                Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                <a href="https://www.walinski-fotografie.de" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>https://www.walinski-fotografie.de</a>
               </p>
             </div>
           ) : (

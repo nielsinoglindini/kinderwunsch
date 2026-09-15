@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Heart, Activity, Leaf, Calendar, Menu, Check, Stethoscope, Star, Compass } from 'lucide-react';
+import { Heart, Activity, Leaf, Calendar, Menu, Check, Stethoscope, Star, Compass, MapPin, Mail } from 'lucide-react';
 import { BookingModal } from './components/BookingModal';
 import { LegalModal } from './components/LegalModal';
 import './index.css';
@@ -497,31 +497,34 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <div className="footer-grid">
-            <div className="footer-col">
-              <h4>Kathrin Kinderwunsch</h4>
-              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', marginBottom: '16px', lineHeight: 1.6 }}>
-                Einfühlsame und professionelle Begleitung auf Ihrem Weg zum Wunschkind und bei Verlusten.
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', flexWrap: 'wrap', marginBottom: '48px' }}>
+            <div className="service-card" style={{ maxWidth: '300px', width: '100%', textAlign: 'center', margin: '0' }}>
+              <div className="service-icon" style={{ margin: '0 auto 16px', display: 'flex', justifyContent: 'center' }}>
+                <MapPin size={28} />
+              </div>
+              <h3 style={{ marginBottom: '8px' }}>Anschrift</h3>
+              <p style={{ margin: 0 }}>
+                Schloßstraße 7b<br />
+                21465 Reinbek
               </p>
             </div>
-            <div className="footer-col">
-              <h4>Navigation</h4>
-              <ul>
-                <li><a href="#about">Über mich</a></li>
-                <li><a href="#services">Leistungen</a></li>
-                <li><a href="#pricing">Preise</a></li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>Kontakt</h4>
-              <ul>
-                <li><a href="mailto:kontakt@kathrin-kinderwunsch.de">kontakt@kathrin-kinderwunsch.de</a></li>
-                <li><a href="#impressum" onClick={(e) => { e.preventDefault(); handleOpenLegal('impressum'); }}>Impressum</a></li>
-                <li><a href="#datenschutz" onClick={(e) => { e.preventDefault(); handleOpenLegal('privacy'); }}>Datenschutz</a></li>
-              </ul>
+            <div className="service-card" style={{ maxWidth: '300px', width: '100%', textAlign: 'center', margin: '0' }}>
+              <div className="service-icon" style={{ margin: '0 auto 16px', display: 'flex', justifyContent: 'center' }}>
+                <Mail size={28} />
+              </div>
+              <h3 style={{ marginBottom: '8px' }}>E-Mail</h3>
+              <p style={{ margin: 0 }}>
+                <a href="mailto:hallo@kinderwunschbegleitung-hamburg.de" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hallo@kinderwunschbegleitung-hamburg.de</a>
+              </p>
             </div>
           </div>
-          <div className="footer-bottom">
+          
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '24px' }}>
+            <a href="#impressum" onClick={(e) => { e.preventDefault(); handleOpenLegal('impressum'); }} style={{ color: 'var(--color-text-muted)' }}>Impressum</a>
+            <a href="#datenschutz" onClick={(e) => { e.preventDefault(); handleOpenLegal('privacy'); }} style={{ color: 'var(--color-text-muted)' }}>Datenschutz</a>
+          </div>
+
+          <div className="footer-bottom" style={{ borderTop: 'none', paddingTop: 0, textAlign: 'center', color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>
             &copy; {new Date().getFullYear()} Kathrin Kinderwunschbegleitung. Alle Rechte vorbehalten.
           </div>
         </div>
