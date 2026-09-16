@@ -53,7 +53,7 @@ function App() {
       } else {
         alert("Es gab leider ein Problem beim Senden. Bitte versuche es später noch einmal.");
       }
-    } catch (error) {
+    } catch (error) { console.error(error);
       alert("Es gab leider ein Problem beim Senden. Bitte überprüfe deine Internetverbindung.");
     }
   };
