@@ -404,17 +404,9 @@ function App() {
             </p>
 
             {contactSubmitted ? (
-              <div className="animate-fade-in" style={{ padding: '32px', backgroundColor: 'var(--color-bg-secondary)', borderRadius: 'var(--radius-md)' }}>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '24px', color: 'var(--color-text-main)', lineHeight: '1.3' }}>
-                  Deine Nachricht ist bei mir angekommen – Deine Anfrage bei Kinderwunschbegleitung Hamburg
-                </h3>
-                <div style={{ color: 'var(--color-text-main)', lineHeight: '1.7' }}>
-                  <p style={{ marginBottom: '16px' }}>Liebe/r {contactForm.name},</p>
-                  <p style={{ marginBottom: '16px' }}>vielen Dank für den Mut, den es gebraucht hat, diesen Schritt zu gehen und mir zu schreiben. Ich weiß, wie emotional und oft auch steinig der Weg sein kann, auf dem du dich gerade befindest – umso mehr schätze ich das Vertrauen, das du mir entgegenbringst.</p>
-                  <p style={{ marginBottom: '16px' }}>Ich werde deine Nachricht in Ruhe lesen und mich innerhalb von 48 Stunden bei dir melden.</p>
-                  <p style={{ marginBottom: '24px' }}>Du musst diesen Weg ab jetzt nicht mehr alleine gehen. In meiner Begleitung erwartet dich ein absolut geschützter, wertfreier und sicherer Raum, in dem all‘ deine Gefühle, Sorgen und Fragen Platz haben.</p>
-                  <p>Alles Liebe und bis ganz bald</p>
-                </div>
+              <div className="animate-fade-in" style={{ padding: '24px', backgroundColor: 'var(--color-bg-secondary)', borderRadius: 'var(--radius-md)' }}>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '12px', color: 'var(--color-text-main)' }}>Vielen Dank für deine Nachricht!</h3>
+                <p style={{ color: 'var(--color-text-muted)' }}>Ich habe deine Anfrage erhalten und werde mich in Kürze bei dir melden.</p>
               </div>
             ) : (
               <form onSubmit={handleContactSubmit} style={{ textAlign: 'left', maxWidth: '600px', margin: '0 auto' }}>
@@ -542,7 +534,7 @@ function App() {
               </p>
             </div>
           </div>
-          
+
           <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '24px' }}>
             <a href="#impressum" onClick={(e) => { e.preventDefault(); handleOpenLegal('impressum'); }} style={{ color: 'var(--color-text-muted)' }}>Impressum</a>
             <a href="#datenschutz" onClick={(e) => { e.preventDefault(); handleOpenLegal('privacy'); }} style={{ color: 'var(--color-text-muted)' }}>Datenschutz</a>
