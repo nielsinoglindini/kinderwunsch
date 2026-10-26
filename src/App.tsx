@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Heart, Activity, Leaf, Calendar, Menu, Check, Stethoscope, Star, Compass, MapPin, Mail } from 'lucide-react';
+import { Heart, Activity, Leaf, Calendar, Menu, X, Check, Stethoscope, Star, Compass, MapPin, Mail } from 'lucide-react';
 import { BookingModal } from './components/BookingModal';
 import { LegalModal } from './components/LegalModal';
 import './index.css';
 
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedService, setSelectedService] = useState<'initial' | 'followup' | 'package' | undefined>(undefined);
 
   const [contactForm, setContactForm] = useState({
@@ -91,7 +92,7 @@ function App() {
       <nav className="navbar">
         <div className="container nav-container">
           <div className="nav-logo">
-            Kathrin <span>Scheu</span> <span>|</span> <span>Ganzheitliche Kinderwunschberaterin</span>
+            Kathrin <span>Scheu</span> <span className="nav-logo-sub">| Ganzheitliche Kinderwunschberaterin</span>
           </div>
           <div className="nav-links">
             <a href="#about" className="nav-link">Über mich</a>
@@ -99,10 +100,24 @@ function App() {
             <a href="#pricing" className="nav-link">Preise</a>
             <a href="#contact" className="nav-link">Kontakt</a>
           </div>
-          <div className="mobile-menu" style={{ display: 'none' /* Handled by media queries normally */ }}>
-            <Menu className="text-gray-600" />
-          </div>
+          <button 
+            className="mobile-menu-btn" 
+            onClick={() => setMobileMenuOpen(prev => !prev)}
+            aria-label="Menü öffnen"
+          >
+            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
         </div>
+
+        {/* Mobile Navigation Dropdown */}
+        {mobileMenuOpen && (
+          <div className="mobile-nav-menu">
+            <a href="#about" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Über mich</a>
+            <a href="#services" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Leistungen</a>
+            <a href="#pricing" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Preise</a>
+            <a href="#contact" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Kontakt</a>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
